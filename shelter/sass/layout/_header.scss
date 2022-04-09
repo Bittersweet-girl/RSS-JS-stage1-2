@@ -8,7 +8,7 @@
 }
 .header-content{
   padding-top: 60px;
-  @extend %columns;
+  @include flex-columns;
   .header__logo{
     h2{
       color: $color-primary;
@@ -19,7 +19,7 @@
     }
   }
   .header__list{
-    @extend %columns;
+    @include flex-columns;
     justify-content: flex-end;
     list-style: none;
     .header__item{

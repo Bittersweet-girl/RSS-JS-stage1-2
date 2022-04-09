@@ -7,7 +7,7 @@
   height: 808px;
 }
 .only-content{
-  @extend %columns;
+  @include flex-columns;
   padding-top: 60px;
   .only-text{
     margin-top: 160px;

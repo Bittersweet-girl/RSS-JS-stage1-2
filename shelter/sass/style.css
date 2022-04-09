@@ -1,15 +1,4 @@
-.header-content, .header-content .header__list, .only-content, .about-content, .friends-content .friends-pagination, .donation-content, .footer .footer-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.friends-content .friends-pagination .pagination__item, .button, .btn, a {
+.button, .btn, a, .friends-content .friends-pagination .pagination__item {
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out;
 }
@@ -19,28 +8,6 @@
   background-repeat: no-repeat;
   width: 60px;
   height: 60px;
-}
-
-.friends-content .friends-pagination .pagination__item {
-  display: block;
-  border-radius: 9px;
-  background-color: #FAFAFA;
-  width: 270px;
-  height: 435px;
-  cursor: pointer;
-}
-
-.friends-content .friends-pagination .pagination__item img {
-  border-radius: 9px 9px 0px 0px;
-}
-
-.friends-content .friends-pagination .pagination__item:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.friends-content .friends-pagination .pagination__item > .button {
-  margin-top: 60px;
 }
 
 article,
@@ -434,6 +401,14 @@ a:hover {
 
 .header-content {
   padding-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header-content .header__logo h2 {
@@ -446,6 +421,14 @@ a:hover {
 }
 
 .header-content .header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -474,6 +457,14 @@ a:hover {
 }
 
 .only-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 60px;
 }
 
@@ -508,6 +499,14 @@ a:hover {
 
 .about-content {
   height: 588px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 80px 174px 0;
 }
 
@@ -543,9 +542,39 @@ a:hover {
 
 .friends-content .friends-pagination {
   padding-top: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.friends-content .friends-pagination .pagination__item {
+  display: block;
+  border-radius: 9px;
+  background-color: #FAFAFA;
+  width: 270px;
+  height: 435px;
+  cursor: pointer;
+}
+
+.friends-content .friends-pagination .pagination__item img {
+  border-radius: 9px 9px 0px 0px;
+}
+
+.friends-content .friends-pagination .pagination__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.friends-content .friends-pagination .pagination__item > .button {
+  margin-top: 60px;
 }
 
 .friends-content .button {
@@ -553,7 +582,8 @@ a:hover {
 }
 
 .help-content {
-  padding: 50px 0;
+  padding: 80px 0 117px;
+  text-align: center;
 }
 
 .help-content h2 {
@@ -561,22 +591,36 @@ a:hover {
 }
 
 .help-items {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 10px;
-  justify-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 35px;
+}
+
+.help-items > * {
+  -ms-flex-preferred-size: 18%;
+      flex-basis: 18%;
 }
 
 .help-items .help-item {
   text-align: center;
+  margin-top: 30px;
 }
 
 .help-items .help-item h3 {
   color: #545454;
+  margin-top: 20px;
 }
 
 .help-items .help-item .help-item__pic {
@@ -633,12 +677,21 @@ a:hover {
 
 .donation-content {
   height: 464px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 80px 0;
+  padding: 82px 120px;
 }
 
 .donation-content .donation__image {
+  margin-top: 9px;
   display: inline-block;
   background-image: url(../assets/images/donation-dog.png);
   width: 505px;
@@ -654,8 +707,11 @@ a:hover {
 }
 
 .donation-content .donation__text > button {
-  padding: 7px 5px;
+  padding: 5px 10px;
   border-radius: 9px;
+  height: 43px;
+  width: 349px;
+  text-align: left;
 }
 
 .donation-content .donation__text > button a {
@@ -682,6 +738,7 @@ a:hover {
 
 .donation-content .donation__text p {
   width: 380px;
+  margin-top: 19px;
   font-size: 12px;
   font-style: normal;
   font-weight: normal;
@@ -696,6 +753,14 @@ a:hover {
 
 .footer .footer-content {
   height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 40px;
 }
 

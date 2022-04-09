@@ -1,6 +1,6 @@
 .about-content{
   height: 588px;
-  @extend %columns;
+  @include flex-columns;
   padding: 80px 174px 0;
   .about-img{
     display: block;

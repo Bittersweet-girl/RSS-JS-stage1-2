@@ -3,7 +3,7 @@
   background-size: 100%;
   .footer-content{
     height: 350px;
-    @extend %columns;
+    @include flex-columns;
     padding-top: 40px;
     .footer-text{
       padding: 0 10px;

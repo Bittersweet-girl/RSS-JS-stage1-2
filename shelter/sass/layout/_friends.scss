@@ -7,10 +7,10 @@
   padding: 80px 0;
   .friends-pagination{
     padding-top: 57px;
-    @extend %columns;
+    @include flex-columns;
     align-items: center;
     .pagination__item{
-      @extend %pagination__item;
+      @include pagination__item;
     }
   }
   .button{

@@ -3,10 +3,11 @@
 }
 .donation-content{
   height: 464px;
-  @extend %columns;
+  @include flex-columns;
   justify-content: space-around;
-  padding: 80px 0;
+  padding: 82px 120px;
   .donation__image{
+    margin-top: 9px;
     display: inline-block;
     background-image: url(../assets/images/donation-dog.png);
     width: 505px;
@@ -18,8 +19,11 @@
       text-align: left;
     }
     &>button{
-      padding: 7px 5px;
+      padding: 5px 10px;
       border-radius: 9px;
+      height: 43px;
+      width: 349px;
+      text-align: left;
       a{
         display: inline;
         font-family: $font-add;
@@ -40,6 +44,7 @@
     }    
     p{
       width: 380px;
+      margin-top: 19px;
       @include font($size: 12px, $height: 18px);
       color: $color-text-light;
     } 
