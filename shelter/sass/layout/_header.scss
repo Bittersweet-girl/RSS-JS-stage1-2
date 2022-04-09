@@ -30,6 +30,10 @@
     }
     .header__link{
       text-decoration: none;
+      color: $color-text-secondary;
+      &:hover{
+        color: $color-primary;
+      }
     }
     .header__link_active{
       border-bottom: 3px solid $color-primary;

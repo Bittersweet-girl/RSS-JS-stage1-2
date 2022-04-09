@@ -32,7 +32,9 @@
           background-size: cover;
           background-repeat: no-repeat;
         }
-
+        &:hover{
+          color: $color-secondary;
+        }
       }
       .footer-text__icon_mail, .footer-text__icon_tel{
         margin-top: 38px;

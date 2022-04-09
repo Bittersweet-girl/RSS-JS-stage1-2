@@ -7,6 +7,7 @@
   padding: 80px 0;
   .friends-pagination{
     padding-top: 57px;
+    margin-bottom: 78px;
     @include flex-columns;
     align-items: center;
     .pagination__item{

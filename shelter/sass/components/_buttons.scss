@@ -10,7 +10,6 @@
   @extend %transition;
   &:hover{
     background-color: $color-primary-light;
-    box-shadow: rgba(255, 255, 255, 0.822) 0px 10px 50px;
   }
 }
 .btn_color{

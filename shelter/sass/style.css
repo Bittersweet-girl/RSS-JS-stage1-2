@@ -264,8 +264,6 @@ input[type="checkbox"], input[type="radio"] {
 
 .button:hover {
   background-color: #FDDCC4;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.822) 0px 10px 50px;
-          box-shadow: rgba(255, 255, 255, 0.822) 0px 10px 50px;
 }
 
 .btn_color {
@@ -381,13 +379,6 @@ a {
   font-style: normal;
   font-weight: normal;
   line-height: 24px;
-  color: #CDCDCD;
-}
-
-a:hover {
-  color: #F1CDB3;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.822) 0px 10px 50px;
-          box-shadow: rgba(255, 255, 255, 0.822) 0px 10px 50px;
 }
 
 .header {
@@ -444,6 +435,11 @@ a:hover {
 
 .header-content .header__list .header__link {
   text-decoration: none;
+  color: #CDCDCD;
+}
+
+.header-content .header__list .header__link:hover {
+  color: #F1CDB3;
 }
 
 .header-content .header__list .header__link_active {
@@ -487,10 +483,7 @@ a:hover {
   font-weight: normal;
   line-height: 24px;
   margin-top: 40px;
-}
-
-.only-content .only-text .button {
-  margin-top: 28px;
+  margin-bottom: 59px;
 }
 
 .only-content .only-img {
@@ -547,6 +540,7 @@ a:hover {
 
 .friends-content .friends-pagination {
   padding-top: 57px;
+  margin-bottom: 78px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -579,6 +573,10 @@ a:hover {
   -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
           box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
   background-color: #ffffff;
+}
+
+.friends-content .friends-pagination .pagination__item:hover > .button {
+  background-color: #FDDCC4;
 }
 
 .friends-content .friends-pagination .pagination__item > .button {
@@ -810,6 +808,10 @@ a:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.footer .footer-content .footer-text a:hover {
+  color: #ffffff;
 }
 
 .footer .footer-content .footer-text .footer-text__icon_mail, .footer .footer-content .footer-text .footer-text__icon_tel {

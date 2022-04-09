@@ -21,11 +21,6 @@ a{
   text-decoration: none;
   cursor: pointer;
   @include font($size: 15px, $height: 24px);
-  color: $color-text-secondary;
   @extend %transition;
-  &:hover{
-    color: $color-primary;
-    box-shadow: rgba(255, 255, 255, 0.822) 0px 10px 50px;
-
-  }
+  
 }
