@@ -1,0 +1,48 @@
+.donation{
+  background-color: #F6F6F6;
+}
+.donation-content{
+  height: 464px;
+  @extend %columns;
+  justify-content: space-around;
+  padding: 80px 0;
+  .donation__image{
+    display: inline-block;
+    background-image: url(../assets/images/donation-dog.png);
+    width: 505px;
+    height: 261px;
+  }
+  .donation__text{
+    text-align: left;
+    h2{
+      text-align: left;
+    }
+    &>button{
+      padding: 7px 5px;
+      border-radius: 9px;
+      a{
+        display: inline;
+        font-family: $font-add;
+        @include font($size: 20px, $height: 23px);
+        color: $color-title;
+        &::before{
+          content: "";
+          margin-right: 10px;
+          display: inline-block;
+          background-image: url(../assets/svg/credit-card.svg);
+          width: 30px;
+          height: 23px;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }    
+    p{
+      width: 380px;
+      @include font($size: 12px, $height: 18px);
+      color: $color-text-light;
+    } 
+  }
+  
+}

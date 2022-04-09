@@ -1,0 +1,19 @@
+.friends{
+  background-color: #F6F6F6;
+  height: 877px;
+}
+.friends-content{
+  text-align: center;
+  padding: 80px 0;
+  .friends-pagination{
+    padding-top: 57px;
+    @extend %columns;
+    align-items: center;
+    .pagination__item{
+      @extend %pagination__item;
+    }
+  }
+  .button{
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,35 @@
+%columns {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+%transition {
+    transition: all .5s ease-out;
+}
+
+%help-icon{
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+%pagination__item{
+  display: block;
+  border-radius: 9px;
+  background-color: $color-link;
+  width: 270px;
+  height: 435px;
+  cursor: pointer;
+  @extend %transition;
+  img{
+    border-radius: 9px 9px 0px 0px;
+  }
+  &:hover{
+    transform: scale(1.1);
+  }
+  &>.button{
+    margin-top: 60px;
+  }
+}

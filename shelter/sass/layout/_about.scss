@@ -1,0 +1,22 @@
+.about-content{
+  height: 588px;
+  @extend %columns;
+  padding: 80px 174px 0;
+  .about-img{
+    display: block;
+    background-image: url(../assets/images/about-pets.jpg);
+    width: 300px;
+    height: 408px;
+  }
+  .about-text{
+    h2{
+      padding: 15px 0;
+    }
+    p{
+      width: 430px;
+      color: $color-text-main;
+      @include font($size: 15px, $height: 24px);
+      // margin: 0px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  }
+html {
+  scroll-behavior: smooth; 
+}
+body{
+    font-family: $font-main;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: $color-secondary;
+}
+.wrapper{
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+  @include font($size: 15px, $height: 24px);
+  color: $color-text-secondary;
+  @extend %transition;
+  &:hover{
+    color: $color-primary;
+    box-shadow: rgba(255, 255, 255, 0.822) 0px 10px 50px;
+
+  }
+}
