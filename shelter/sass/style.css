@@ -765,7 +765,7 @@ a:hover {
 }
 
 .footer .footer-content .footer-text {
-  padding: 0 10px;
+  padding-top: 17px;
   width: 400px;
 }
 
@@ -788,11 +788,12 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 34px;
 }
 
 .footer .footer-content .footer-text a::before {
   content: "";
-  margin-right: 10px;
+  margin-right: 16px;
   height: 32px;
   display: inline-block;
   background-position: center;
@@ -813,6 +814,7 @@ a:hover {
 .footer .footer-content .footer-text .footer-text__icon_location::before {
   background-image: url(../assets/svg/icon-marker.svg);
   width: 22px;
+  margin-right: 10px;
 }
 
 .footer .footer-content .footer-image {

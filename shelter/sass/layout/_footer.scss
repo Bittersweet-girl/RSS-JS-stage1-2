@@ -6,7 +6,7 @@
     @include flex-columns;
     padding-top: 40px;
     .footer-text{
-      padding: 0 10px;
+      padding-top: 17px;
       width: 400px;
       h2{
         color: $color-secondary;
@@ -19,15 +19,17 @@
         @include font($size: 20px, $height: 23px);
         display: inline-flex;
         align-items: center;
+        margin-top: 34px;
         &::before{
           content: "";
-          margin-right: 10px;
+          margin-right: 16px;
           height: 32px;
           display: inline-block;
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
         }
+
       }
       .footer-text__icon_mail::before{
         background-image: url(../assets/svg/icon-email.svg);
@@ -40,6 +42,7 @@
       .footer-text__icon_location::before{
         background-image: url(../assets/svg/icon-marker.svg);
         width: 22px;
+        margin-right: 10px;
       }
     }
     .footer-image{
