@@ -1,5 +1,5 @@
 .help-content{
-  padding: 80px 0 117px;
+  padding: 80px 0 97px;
   text-align: center;
   
   h2{
@@ -10,20 +10,18 @@
 .help-items{
   @include flex-columns;
   flex-wrap: wrap;
-  gap: 15px;
+  align-items: center;
+  column-gap: 117px;
+  row-gap: 36px;
   justify-content: center;
-  margin-top: 35px;
- 
-  &>*{
-    flex-basis: 18%;
-  }
+  margin-top: 30px;
   .help-item{
     text-align: center;
     // padding: 5px;
     margin-top: 30px;
     h3{
       color: $color-title;
-      margin-top: 20px;
+      margin-top: 22px;
     }
     .help-item__pic{
       display: inline-flex;

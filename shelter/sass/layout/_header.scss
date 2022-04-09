@@ -7,11 +7,12 @@
   height: 100px;
 }
 .header-content{
-  padding-top: 60px;
+  padding-top: 57px;
   @include flex-columns;
   .header__logo{
     h2{
       color: $color-primary;
+      font-size: 35px;
     }
     p{
       color: $color-secondary;
@@ -22,8 +23,10 @@
     @include flex-columns;
     justify-content: flex-end;
     list-style: none;
+    gap: 23px;
+    margin-top: 20px;
     .header__item{
-      padding: 0px 15px;
+      padding: 0px 5px;
     }
     .header__link{
       text-decoration: none;

@@ -5,24 +5,27 @@
     height: 350px;
     @include flex-columns;
     padding-top: 40px;
+    &>*{
+      flex-basis: 26%;
+    }
     .footer-text{
       padding-top: 17px;
-      width: 400px;
+      // width: 415px;
+      // margin-right: 10px;
       h2{
         color: $color-secondary;
         text-align: left;
-        width: 260px;
+        width: 276px;
       }
       a{
         color: $color-primary;
         font-family: $font-add;
-        @include font($size: 20px, $height: 23px);
+        @include font($size: 22px, $height: 23px);
         display: inline-flex;
         align-items: center;
-        margin-top: 34px;
         &::before{
           content: "";
-          margin-right: 16px;
+          margin-right: 19px;
           height: 32px;
           display: inline-block;
           background-position: center;
@@ -30,6 +33,12 @@
           background-repeat: no-repeat;
         }
 
+      }
+      .footer-text__icon_mail, .footer-text__icon_tel{
+        margin-top: 38px;
+      }
+      .footer-text__icon_location{
+        margin-top: 33px;
       }
       .footer-text__icon_mail::before{
         background-image: url(../assets/svg/icon-email.svg);
@@ -42,13 +51,13 @@
       .footer-text__icon_location::before{
         background-image: url(../assets/svg/icon-marker.svg);
         width: 22px;
-        margin-right: 10px;
       }
     }
     .footer-image{
       width: 300px;
       height: 310px;
       background-image: url(../assets/images/footer-puppy.png);
+      background-repeat: no-repeat;
     }
   }
 }

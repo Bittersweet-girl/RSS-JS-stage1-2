@@ -11,9 +11,10 @@
     align-items: center;
     .pagination__item{
       @include pagination__item;
+      margin: 0 35px;
     }
   }
   .button{
-    margin-top: 60px;
+    margin-top: 63px;
   }
 }
