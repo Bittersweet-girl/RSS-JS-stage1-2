@@ -48,6 +48,11 @@
 }
 .btn_active{
   background-color: $color-primary;
+  &:hover{
+    background-color: $color-primary;
+    border: 2px solid $color-primary;
+    cursor: auto;
+  }
 }
 
 .btn_left::before{
@@ -56,21 +61,5 @@
 }
 .btn_right::before{
   content: "\f178";
-  font-family: FontAwesome;
-}
-.btn_arrows_left::before{
-  content: "\f100";
-  font-family: FontAwesome;
-}
-.btn_arrow_left::before{
-  content: "\f104";
-  font-family: FontAwesome;
-}
-.btn_arrow_right::before{
-  content: "\f105";
-  font-family: FontAwesome;
-}
-.btn_arrows_right::before{
-  content: "\f101";
   font-family: FontAwesome;
 }

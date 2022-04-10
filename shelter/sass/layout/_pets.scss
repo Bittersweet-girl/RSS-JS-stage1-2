@@ -4,6 +4,12 @@
 .pets-content{
   text-align: center;
   padding: 80px 0 40px;
+  h1{
+    font-family: $font-add;
+    @include font($size: 39px, $height: 45px);
+    color: $color-title;
+    margin: 0px;
+  }
   .pets-pagination{
     padding-top: 57px;
     display: grid;

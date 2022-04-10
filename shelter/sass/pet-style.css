@@ -305,6 +305,12 @@ input[type="checkbox"], input[type="radio"] {
   background-color: #F1CDB3;
 }
 
+.btn_active:hover {
+  background-color: #F1CDB3;
+  border: 2px solid #F1CDB3;
+  cursor: auto;
+}
+
 .btn_left::before {
   content: "\f177";
   font-family: FontAwesome;
@@ -312,26 +318,6 @@ input[type="checkbox"], input[type="radio"] {
 
 .btn_right::before {
   content: "\f178";
-  font-family: FontAwesome;
-}
-
-.btn_arrows_left::before {
-  content: "\f100";
-  font-family: FontAwesome;
-}
-
-.btn_arrow_left::before {
-  content: "\f104";
-  font-family: FontAwesome;
-}
-
-.btn_arrow_right::before {
-  content: "\f105";
-  font-family: FontAwesome;
-}
-
-.btn_arrows_right::before {
-  content: "\f101";
   font-family: FontAwesome;
 }
 
@@ -504,6 +490,16 @@ a {
 .pets-content {
   text-align: center;
   padding: 80px 0 40px;
+}
+
+.pets-content h1 {
+  font-family: "Georgia", serif;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 45px;
+  color: #545454;
+  margin: 0px;
 }
 
 .pets-content .pets-pagination {
