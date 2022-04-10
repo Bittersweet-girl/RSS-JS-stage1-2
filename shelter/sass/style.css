@@ -484,6 +484,10 @@ a {
   height: 120px;
 }
 
+.header_lite .header-content {
+  padding-top: 27px;
+}
+
 .header_lite .header-content .header__logo h2 {
   color: #545454;
 }

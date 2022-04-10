@@ -3,18 +3,24 @@
 }
 .pets-content{
   text-align: center;
-  padding: 80px 0;
+  padding: 80px 0 40px;
   .pets-pagination{
     padding-top: 57px;
-    margin-bottom: 78px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 30px;
+    row-gap: 33px;
+    column-gap: 40px;
     align-items: center;
+    justify-items: center;
     .pagination__item{
       @include pagination__item;
-      margin: 0 35px;
+    }
+  }
+  .pets-btns{
+    margin: 60px 0;
+    .btn{
+      margin: 0 8px;
     }
   }
 }
