@@ -1,0 +1,32 @@
+.pets{
+  background-color: #F6F6F6;
+}
+.pets-content{
+  text-align: center;
+  padding: 80px 0 40px;
+  h1{
+    font-family: $font-add;
+    @include font($size: 39px, $height: 45px);
+    color: $color-title;
+    margin: 0px;
+  }
+  .pets-pagination{
+    padding-top: 57px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 33px;
+    column-gap: 40px;
+    align-items: center;
+    justify-items: center;
+    .pagination__item{
+      @include pagination__item;
+    }
+  }
+  .pets-btns{
+    margin: 60px 0;
+    .btn{
+      margin: 0 8px;
+    }
+  }
+}

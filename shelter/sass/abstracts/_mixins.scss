@@ -1,0 +1,36 @@
+@mixin font ($size, $height: $size, $weight: normal, $style: normal) {
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin flex-columns {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+@mixin pagination__item{
+  display: block;
+  border-radius: 9px;
+  background-color: $color-link;
+  width: 270px;
+  height: 435px;
+  cursor: pointer;
+  @extend %transition;
+  img{
+    border-radius: 9px 9px 0px 0px;
+    margin-bottom: 28px;
+  }
+  &:hover{
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background-color: $color-secondary;
+    &>.button{
+      background-color: $color-primary-light;
+    }
+  }
+  &>.button{
+    margin-top: 31px;
+  }
+}

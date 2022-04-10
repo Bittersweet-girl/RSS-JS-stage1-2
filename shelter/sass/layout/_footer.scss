@@ -1,0 +1,65 @@
+.footer{
+  background-image: url(../assets/images/footer-bg.jpg);
+  background-size: 100%;
+  .footer-content{
+    height: 350px;
+    @include flex-columns;
+    padding-top: 40px;
+    &>*{
+      flex-basis: 26%;
+    }
+    .footer-text{
+      padding-top: 17px;
+      // width: 415px;
+      // margin-right: 10px;
+      h2{
+        color: $color-secondary;
+        text-align: left;
+        width: 276px;
+      }
+      a{
+        color: $color-primary;
+        font-family: $font-add;
+        @include font($size: 22px, $height: 23px);
+        display: inline-flex;
+        align-items: center;
+        &::before{
+          content: "";
+          margin-right: 19px;
+          height: 32px;
+          display: inline-block;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        &:hover{
+          color: $color-secondary;
+        }
+      }
+      .footer-text__icon_mail, .footer-text__icon_tel{
+        margin-top: 38px;
+      }
+      .footer-text__icon_location{
+        margin-top: 33px;
+      }
+      .footer-text__icon_mail::before{
+        background-image: url(../assets/svg/icon-email.svg);
+        width: 40px;
+      }
+      .footer-text__icon_tel::before{
+        background-image: url(../assets/svg/icon-phone.svg);
+        width: 40px;
+      }
+      .footer-text__icon_location::before{
+        background-image: url(../assets/svg/icon-marker.svg);
+        width: 22px;
+      }
+    }
+    .footer-image{
+      width: 300px;
+      height: 310px;
+      background-image: url(../assets/images/footer-puppy.png);
+      background-repeat: no-repeat;
+    }
+  }
+}

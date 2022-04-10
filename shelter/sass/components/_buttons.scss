@@ -1,0 +1,65 @@
+.button{
+  cursor: pointer;
+  height: 52px;
+  padding: 15px 43px;
+  font-family: $font-add;
+  @include font($size: 19px, $height: 22px);
+  color: $color-text-dark;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  @extend %transition;
+  &:hover{
+    background-color: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+}
+.btn{
+  cursor: pointer;
+  width: 52px;
+  height: 52px;
+  font-family: $font-add;
+  @include font($size: 17px, $height: 22px);
+  color: $color-text-dark;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  @extend %transition;
+  padding: 15px;
+  &:hover{
+    background-color: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+}
+.btn_color{
+  background-color: $color-primary;
+}
+.btn_blank{
+  background: transparent;
+}
+.btn_inactive{
+  border: 2px solid $color-text-secondary;
+  color: $color-text-secondary;
+  background: transparent;
+  cursor: auto;
+  &:hover {
+    border: 2px solid $color-text-secondary;
+    color: $color-text-secondary;
+    background: transparent;
+  }
+}
+.btn_active{
+  background-color: $color-primary;
+  &:hover{
+    background-color: $color-primary;
+    border: 2px solid $color-primary;
+    cursor: auto;
+  }
+}
+
+.btn_left::before{
+  content: "\f177";
+  font-family: FontAwesome;
+}
+.btn_right::before{
+  content: "\f178";
+  font-family: FontAwesome;
+}
