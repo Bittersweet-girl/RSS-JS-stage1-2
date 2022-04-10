@@ -6,6 +6,7 @@
   background-size: 100%;
   height: 100px;
 }
+
 .header-content{
   padding-top: 57px;
   @include flex-columns;
@@ -39,4 +40,29 @@
       border-bottom: 3px solid $color-primary;
     }
   }
+}
+.header_lite{
+  background-image: none;
+  background-color: $color-secondary;
+  height: 120px;
+  .header-content{
+    .header__logo{
+      h2{
+        color: $color-title;
+      }
+      p{
+        color: $color-text-dark;
+      }
+    }
+    .header__list{
+      .header__link{
+        color: $color-title;
+        &:hover{
+          color: $color-text-dark;
+        }
+      }
+    }
+  }
+  
+  
 }

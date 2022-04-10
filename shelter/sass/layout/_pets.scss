@@ -1,0 +1,20 @@
+.pets{
+  background-color: #F6F6F6;
+}
+.pets-content{
+  text-align: center;
+  padding: 80px 0;
+  .pets-pagination{
+    padding-top: 57px;
+    margin-bottom: 78px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 30px;
+    align-items: center;
+    .pagination__item{
+      @include pagination__item;
+      margin: 0 35px;
+    }
+  }
+}
