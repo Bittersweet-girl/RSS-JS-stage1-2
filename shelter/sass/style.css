@@ -344,7 +344,7 @@ h2 {
   font-weight: normal;
   line-height: 45px;
   color: #545454;
-  margin: 0px;
+  margin: 0;
 }
 
 h3 {
@@ -354,16 +354,17 @@ h3 {
   font-weight: normal;
   line-height: 23px;
   color: #545454;
-  margin: 0px;
+  margin: 0;
 }
 
 h4 {
   font-family: "Georgia", serif;
-  font-size: 15px;
+  font-size: 17px;
   font-style: normal;
   font-weight: normal;
   line-height: 17px;
   color: #545454;
+  margin: 20px 0;
 }
 
 * {
@@ -656,7 +657,7 @@ a {
           align-items: center;
   -webkit-column-gap: 117px;
           column-gap: 117px;
-  row-gap: 36px;
+  row-gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -670,7 +671,7 @@ a {
 
 .help-items .help-item h3 {
   color: #545454;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .help-items .help-item .help-item__pic {
@@ -726,7 +727,7 @@ a {
 }
 
 .donation-content {
-  height: 462px;
+  height: 464px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -767,7 +768,7 @@ a {
 .donation-content .donation__text > button a {
   display: inline;
   font-family: "Georgia", serif;
-  font-size: 20px;
+  font-size: 22px;
   font-style: normal;
   font-weight: normal;
   line-height: 23px;
@@ -815,8 +816,8 @@ a {
 }
 
 .footer .footer-content > * {
-  -ms-flex-preferred-size: 26%;
-      flex-basis: 26%;
+  -ms-flex-preferred-size: 25.3%;
+      flex-basis: 25.3%;
 }
 
 .footer .footer-content .footer-text {
@@ -886,5 +887,6 @@ a {
   height: 310px;
   background-image: url(../assets/images/footer-puppy.png);
   background-repeat: no-repeat;
+  margin-left: 20px;
 }
 /*# sourceMappingURL=style.css.map */
