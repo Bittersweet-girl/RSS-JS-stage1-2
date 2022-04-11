@@ -6,7 +6,7 @@
     @include flex-columns;
     padding-top: 40px;
     &>*{
-      flex-basis: 26%;
+      flex-basis: 25.3%;
     }
     .footer-text{
       padding-top: 17px;
@@ -60,6 +60,7 @@
       height: 310px;
       background-image: url(../assets/images/footer-puppy.png);
       background-repeat: no-repeat;
+      margin-left: 20px;
     }
   }
 }

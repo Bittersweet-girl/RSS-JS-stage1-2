@@ -12,7 +12,7 @@
   flex-wrap: wrap;
   align-items: center;
   column-gap: 117px;
-  row-gap: 36px;
+  row-gap: 30px;
   justify-content: center;
   margin-top: 30px;
   .help-item{
@@ -21,7 +21,7 @@
     margin-top: 30px;
     h3{
       color: $color-title;
-      margin-top: 22px;
+      margin-top: 24px;
     }
     .help-item__pic{
       display: inline-flex;
