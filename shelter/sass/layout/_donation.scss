@@ -2,7 +2,7 @@
   background-color: #F6F6F6;
 }
 .donation-content{
-  height: 462px;
+  height: 464px;
   @include flex-columns;
   justify-content: space-around;
   padding: 81px 124px;
@@ -27,7 +27,7 @@
       a{
         display: inline;
         font-family: $font-add;
-        @include font($size: 20px, $height: 23px);
+        @include font($size: 22px, $height: 23px);
         color: $color-title;
         &::before{
           content: "";
