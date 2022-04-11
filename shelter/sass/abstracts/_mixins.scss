@@ -9,6 +9,10 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    @include media-tablet{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 }
 
 @mixin pagination__item{
@@ -33,4 +37,12 @@
   &>.button{
     margin-top: 31px;
   }
+}
+
+@mixin media-tablet {
+    @media (max-width: $tablet-width) { @content; }
+}
+  
+@mixin media-mobile {
+    @media (max-width: $mobile-width) { @content; }
 }
