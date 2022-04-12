@@ -384,6 +384,12 @@ body {
   padding: 0 40px;
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -404,7 +410,6 @@ a {
 
 @media (max-width: 768px) {
   .header {
-    height: 130px;
     background-image: url("../assets/images/background-768.jpg");
   }
 }
@@ -428,6 +433,15 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding-top: 26px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -489,6 +503,9 @@ a {
   background-image: none;
   background-color: #ffffff;
   height: 120px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .header_lite .header-content {

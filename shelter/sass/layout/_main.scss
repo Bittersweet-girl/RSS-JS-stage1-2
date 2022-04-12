@@ -1,21 +1,24 @@
 * {
   box-sizing: border-box;
-  }
+}
 html {
   scroll-behavior: smooth; 
 }
 body{
-    font-family: $font-main;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: $color-secondary;
+  font-family: $font-main;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: $color-secondary;
 }
 .wrapper{
-    max-width: $content-width;
-    margin: 0 auto;
-    padding: 0 40px;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 40px;
+  @include media-tablet{
+    padding: 0 30px;
+  }
 }
 a{
   text-decoration: none;
