@@ -15,9 +15,11 @@
   row-gap: 30px;
   justify-content: center;
   margin-top: 30px;
+  @include media-tablet{
+    row-gap: 28px;
+  }
   .help-item{
     text-align: center;
-    // padding: 5px;
     margin-top: 30px;
     h3{
       color: $color-title;

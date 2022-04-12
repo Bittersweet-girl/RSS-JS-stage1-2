@@ -7,6 +7,9 @@
     background-image: url(../assets/images/about-pets.jpg);
     width: 300px;
     height: 408px;
+    @include media-tablet{
+      margin-top: 55px;
+    }
   }
   .about-text{
     h2{
@@ -22,6 +25,6 @@
   @include media-tablet{
     height: auto;
     flex-wrap: wrap-reverse;
-    padding: 80px;
+    padding: 66px 0 100px;
   }
 }
