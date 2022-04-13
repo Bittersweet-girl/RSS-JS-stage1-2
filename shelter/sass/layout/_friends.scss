@@ -13,6 +13,16 @@
     .pagination__item{
       @include pagination__item;
       margin: 0 35px;
+      @include media-tablet{
+        margin: 0 17px;
+      }
+    }
+    @include media-tablet{
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      .pagination__item_hidden{
+        display: none;
+      }
     }
   }
   .button{

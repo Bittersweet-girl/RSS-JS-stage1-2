@@ -3,24 +3,34 @@
 }
 .pets-content{
   text-align: center;
-  padding: 80px 0 40px;
+  padding: 81px 0 40px;
   h1{
     font-family: $font-add;
-    @include font($size: 39px, $height: 45px);
+    @include font($size: 35px, $height: 45px);
+    letter-spacing: 0.06em;
     color: $color-title;
     margin: 0px;
   }
   .pets-pagination{
-    padding-top: 57px;
+    padding-top: 59px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 31px;
+    row-gap: 30px;
     column-gap: 40px;
     align-items: center;
     justify-items: center;
     .pagination__item{
       @include pagination__item;
+    }
+    @include media-tablet{
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr; 
+      padding: 27px 44px 0;
+      column-gap: 0;
+      .pagination__item_hidden{
+        display: none;
+      }     
     }
   }
   .pets-btns{
@@ -28,5 +38,8 @@
     .btn{
       margin: 0 8px;
     }
+    @include media-tablet{
+      margin: 43px 0 36px;
+    }
   }
-}
+}    

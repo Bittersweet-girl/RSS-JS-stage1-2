@@ -1,7 +1,9 @@
 .help-content{
   padding: 80px 0 97px;
   text-align: center;
-  
+  @include media-tablet{
+    padding: 80px 0 100px;
+  }
   h2{
   text-align: center;
   }
@@ -15,9 +17,11 @@
   row-gap: 30px;
   justify-content: center;
   margin-top: 30px;
+  @include media-tablet{
+    row-gap: 28px;
+  }
   .help-item{
     text-align: center;
-    // padding: 5px;
     margin-top: 30px;
     h3{
       color: $color-title;

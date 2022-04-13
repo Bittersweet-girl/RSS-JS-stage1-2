@@ -2,9 +2,12 @@
   background-image: url('../assets/images/background.jpg');
   background-position: center -100px;
   background-repeat: no-repeat;
+  background-size: contain;
   background-color: #211F20;
   background-size: 100%;
-  height: 808px;
+  @include media-tablet{
+    background-image: url('../assets/images/background-768.jpg');
+  }
 }
 .only-content{
   @include flex-columns;
@@ -21,12 +24,28 @@
       margin-top: 40px;
       margin-bottom: 59px;
     }
+    @include media-tablet{
+      margin-top: 0;
+      div{
+        text-align: center;
+      }
+    }
   }
   .only-img{
     display: block;
     background-image: url(../assets/images/main-puppy.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 698px;
     height: 728px;
     margin-top: 20px;
+    @include media-tablet{
+      width: 569px;
+      height: 593px;
+      margin: 114px 0 0 139px;
+    }
+  }
+  @include media-tablet{
+    padding-top: 22px;
   }
 }

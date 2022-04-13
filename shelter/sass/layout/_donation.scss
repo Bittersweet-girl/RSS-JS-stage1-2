@@ -6,12 +6,22 @@
   @include flex-columns;
   justify-content: space-around;
   padding: 81px 124px;
+  @include media-tablet{
+    flex-wrap: wrap-reverse;
+    height: auto;
+    padding: 81px 0 98px;
+  }
   .donation__image{
     margin-top: 9px;
     display: inline-block;
     background-image: url(../assets/images/donation-dog.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 505px;
     height: 261px;
+    @include media-tablet{
+      margin-top: 50px;
+    }
   }
   .donation__text{
     text-align: left;
@@ -27,7 +37,8 @@
       a{
         display: inline;
         font-family: $font-add;
-        @include font($size: 22px, $height: 23px);
+        @include font($size: 20px, $height: 23px);
+        letter-spacing: 0.06em;
         color: $color-title;
         &::before{
           content: "";

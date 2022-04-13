@@ -1,6 +1,9 @@
 .footer{
   background-image: url(../assets/images/footer-bg.jpg);
   background-size: 100%;
+  @include media-tablet{
+    background-image: url(../assets/images/footer-bg-768.jpg);
+  }
   .footer-content{
     height: 350px;
     @include flex-columns;
@@ -8,19 +11,25 @@
     &>*{
       flex-basis: 25.3%;
     }
+    @include media-tablet{
+      height: auto;
+      padding-top: 15px;
+      column-gap: 33px;
+      &>*{
+      flex-basis: 43%;
+    }
+    }
     .footer-text{
       padding-top: 17px;
-      // width: 415px;
-      // margin-right: 10px;
       h2{
         color: $color-secondary;
         text-align: left;
-        width: 276px;
       }
       a{
         color: $color-primary;
         font-family: $font-add;
-        @include font($size: 22px, $height: 23px);
+        @include font($size: 20px, $height: 23px);
+        letter-spacing: 0.06em;
         display: inline-flex;
         align-items: center;
         &::before{
@@ -61,6 +70,9 @@
       background-image: url(../assets/images/footer-puppy.png);
       background-repeat: no-repeat;
       margin-left: 20px;
+      @include media-tablet{
+        margin: 59px 0 0 5px;
+      }
     }
   }
 }

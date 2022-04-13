@@ -5,19 +5,22 @@ h1{
 }
 h2{
   font-family: $font-add;
-  @include font($size: 39px, $height: 45px);
+  @include font($size: 35px, $height: 45px);
+  letter-spacing: 0.06em;
   color: $color-title;
   margin: 0;
 }
 h3{
   font-family: $font-add;
-  @include font($size: 23px, $height: 23px);
+  @include font($size: 20px, $height: 23px);
+  letter-spacing: 0.06em;
   color: $color-title;
   margin: 0;
 }
 h4{
   font-family: $font-add;
-  @include font($size: 17px, $height: 17px);
+  @include font($size: 15px, $height: 17px);
+  letter-spacing: 0.06em;
   color: $color-title;
   margin: 20px 0;
 }
