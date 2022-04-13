@@ -37,7 +37,8 @@
       a{
         display: inline;
         font-family: $font-add;
-        @include font($size: 22px, $height: 23px);
+        @include font($size: 20px, $height: 23px);
+        letter-spacing: 0.06em;
         color: $color-title;
         &::before{
           content: "";

@@ -253,10 +253,11 @@ input[type="checkbox"], input[type="radio"] {
   height: 52px;
   padding: 15px 43px;
   font-family: "Georgia", serif;
-  font-size: 19px;
+  font-size: 17px;
   font-style: normal;
   font-weight: normal;
   line-height: 22px;
+  letter-spacing: 0.06em;
   color: #292929;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
@@ -339,30 +340,33 @@ h1 {
 
 h2 {
   font-family: "Georgia", serif;
-  font-size: 39px;
+  font-size: 35px;
   font-style: normal;
   font-weight: normal;
   line-height: 45px;
+  letter-spacing: 0.06em;
   color: #545454;
   margin: 0;
 }
 
 h3 {
   font-family: "Georgia", serif;
-  font-size: 23px;
+  font-size: 20px;
   font-style: normal;
   font-weight: normal;
   line-height: 23px;
+  letter-spacing: 0.06em;
   color: #545454;
   margin: 0;
 }
 
 h4 {
   font-family: "Georgia", serif;
-  font-size: 17px;
+  font-size: 15px;
   font-style: normal;
   font-weight: normal;
   line-height: 17px;
+  letter-spacing: 0.06em;
   color: #545454;
   margin: 20px 0;
 }
@@ -422,7 +426,7 @@ a {
 }
 
 .header-content {
-  padding-top: 57px;
+  padding-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -478,30 +482,20 @@ a {
 
 .header-content .header__logo h2 {
   color: #F1CDB3;
-  font-size: 35px;
-}
-
-@media (max-width: 375px) {
-  .header-content .header__logo h2 {
-    font-size: 32px;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 35px;
-  }
+  font-size: 32px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 35px;
 }
 
 .header-content .header__logo p {
   color: #ffffff;
-  margin: 0px;
-}
-
-@media (max-width: 375px) {
-  .header-content .header__logo p {
-    font-size: 13px;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 15px;
-  }
+  margin: 9px 4px 0;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 15px;
+  letter-spacing: 0.1em;
 }
 
 .header-content .header__list {
@@ -517,8 +511,8 @@ a {
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style: none;
-  gap: 23px;
-  margin-top: 20px;
+  gap: 24px;
+  margin-top: 17px;
 }
 
 @media (max-width: 768px) {
@@ -637,7 +631,7 @@ a {
 }
 
 .header_lite .header-content {
-  padding-top: 27px;
+  padding-top: 30px;
 }
 
 .header_lite .header-content .header__logo h2 {
@@ -866,7 +860,7 @@ a {
 }
 
 .friends-content .friends-pagination .pagination__item > .button {
-  margin-top: 31px;
+  margin-top: 28px;
 }
 
 @media (max-width: 768px) {
@@ -1077,10 +1071,11 @@ a {
 .donation-content .donation__text > button a {
   display: inline;
   font-family: "Georgia", serif;
-  font-size: 22px;
+  font-size: 20px;
   font-style: normal;
   font-weight: normal;
   line-height: 23px;
+  letter-spacing: 0.06em;
   color: #545454;
 }
 
@@ -1165,16 +1160,16 @@ a {
 .footer .footer-content .footer-text h2 {
   color: #ffffff;
   text-align: left;
-  width: 276px;
 }
 
 .footer .footer-content .footer-text a {
   color: #F1CDB3;
   font-family: "Georgia", serif;
-  font-size: 22px;
+  font-size: 20px;
   font-style: normal;
   font-weight: normal;
   line-height: 23px;
+  letter-spacing: 0.06em;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;

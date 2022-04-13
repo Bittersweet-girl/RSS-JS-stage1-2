@@ -3,15 +3,16 @@
 }
 .pets-content{
   text-align: center;
-  padding: 80px 0 40px;
+  padding: 81px 0 40px;
   h1{
     font-family: $font-add;
-    @include font($size: 39px, $height: 45px);
+    @include font($size: 35px, $height: 45px);
+    letter-spacing: 0.06em;
     color: $color-title;
     margin: 0px;
   }
   .pets-pagination{
-    padding-top: 57px;
+    padding-top: 59px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
