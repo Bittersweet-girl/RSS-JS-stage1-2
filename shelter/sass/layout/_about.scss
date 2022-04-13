@@ -7,7 +7,7 @@
     background-image: url(../assets/images/about-pets.jpg);
     width: 300px;
     height: 408px;
-    @include media-tablet{
+    @include media-laptop{
       margin-top: 55px;
     }
   }
@@ -22,7 +22,7 @@
       margin: 9px 0 25px;
     }
   }
-  @include media-tablet{
+  @include media-laptop{
     height: auto;
     flex-wrap: wrap-reverse;
     padding: 66px 0 100px;

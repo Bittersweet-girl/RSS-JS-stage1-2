@@ -6,7 +6,7 @@
   @include flex-columns;
   justify-content: space-around;
   padding: 81px 124px;
-  @include media-tablet{
+  @include media-laptop{
     flex-wrap: wrap-reverse;
     height: auto;
     padding: 81px 0 98px;
@@ -19,7 +19,7 @@
     background-repeat: no-repeat;
     width: 505px;
     height: 261px;
-    @include media-tablet{
+    @include media-laptop{
       margin-top: 50px;
     }
   }
