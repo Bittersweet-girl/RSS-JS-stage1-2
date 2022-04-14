@@ -10,6 +10,8 @@
     flex-wrap: wrap-reverse;
     height: auto;
     padding: 81px 0 98px;
+    flex-direction: column-reverse;
+    align-items: center;
   }
   .donation__image{
     margin-top: 9px;
@@ -29,7 +31,7 @@
       text-align: left;
     }
     &>button{
-      padding: 5px 10px;
+      padding: 2px 10px 7px;
       border-radius: 9px;
       height: 43px;
       width: 349px;

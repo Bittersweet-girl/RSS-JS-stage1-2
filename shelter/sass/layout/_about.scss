@@ -2,6 +2,12 @@
   height: 588px;
   @include flex-columns;
   padding: 80px 174px 0;
+  @include media-laptop{
+    height: auto;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 66px 0 100px;
+  }
   .about-img{
     display: block;
     background-image: url(../assets/images/about-pets.jpg);
@@ -22,9 +28,5 @@
       margin: 9px 0 25px;
     }
   }
-  @include media-laptop{
-    height: auto;
-    flex-wrap: wrap-reverse;
-    padding: 66px 0 100px;
-  }
+  
 }
