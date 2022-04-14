@@ -13,6 +13,9 @@
     flex-direction: column-reverse;
     align-items: center;
   }
+  @include media-tablet{
+    padding: 42px 0 41px;
+  }
   .donation__image{
     margin-top: 9px;
     display: inline-block;
@@ -24,11 +27,26 @@
     @include media-laptop{
       margin-top: 50px;
     }
+    @include media-tablet{
+      width: 260px;
+      height: 135px; 
+      margin-top: 32px;
+    }
+    
   }
   .donation__text{
     text-align: left;
+    @include media-tablet{
+      h4{
+        line-height: 24px;
+        letter-spacing: normal;
+      }
+    }
     h2{
       text-align: left;
+      @include media-tablet{
+        text-align: center;
+      }
     }
     &>button{
       padding: 2px 10px 7px;
@@ -36,12 +54,18 @@
       height: 43px;
       width: 349px;
       text-align: left;
+      @include media-tablet{
+        width: 281px;
+      }
       a{
         display: inline;
         font-family: $font-add;
         @include font($size: 20px, $height: 23px);
         letter-spacing: 0.06em;
         color: $color-title;
+        @include media-tablet{
+          @include font($size: 15px, $height: 17px);
+        }
         &::before{
           content: "";
           margin-right: 10px;
@@ -60,6 +84,10 @@
       margin-top: 19px;
       @include font($size: 12px, $height: 18px);
       color: $color-text-light;
+      @include media-tablet{
+        width: 280px;
+        text-align: justify;
+      }
     } 
   }
   

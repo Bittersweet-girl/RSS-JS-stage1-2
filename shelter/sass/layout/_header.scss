@@ -6,7 +6,7 @@
   background-size: 100%;
   height: 100px;
   @include media-laptop {
-    background-image: url("../assets/images/background-768.jpg");
+    background-size: auto;
   }
 }
 .header-content {
@@ -85,31 +85,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 28px;
+    width: 30px;
+    height: 32px;
     cursor: pointer;
     user-select: none;
     z-index: 2;
+    margin: 14px 43px 0 0;
     @include media-tablet {
       display: flex;
     }
   }
   .burger__line {
-    width: 80%;
+    width: 100%;
     height: 2px;
     background-color: $color-secondary;
-    margin: 3.5px 0;
+    margin: 4px 0;
     z-index: 2;
     transition: all 0.3s ease-in-out;
   }
-  .header__burger.open .burger__line_1 {
-    transform: rotate(-45deg) translate(-6px, 6px);
-  }
-  .header__burger.open .burger__line_2 {
-    opacity: 0;
-  }
-  .header__burger.open .burger__line_3 {
-    transform: rotate(45deg) translate(-6px, -6px);
+  .header__burger.open {
+    transform: rotate(90deg);
   }
 }
 .header_lite {
@@ -135,6 +130,9 @@
           color: $color-text-dark;
         }
       }
+    }
+    .burger__line{
+      background-color: $color-text-dark;
     }
   }
 }

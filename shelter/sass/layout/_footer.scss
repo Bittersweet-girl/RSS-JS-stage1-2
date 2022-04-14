@@ -1,8 +1,13 @@
 .footer{
   background-image: url(../assets/images/footer-bg.jpg);
   background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
   @include media-laptop{
-    background-image: url(../assets/images/footer-bg-768.jpg);
+    background-size: auto 640px;
+  }
+  @include media-tablet{
+    background-size: auto 807px;
   }
   .footer-content{
     height: 350px;
@@ -16,14 +21,32 @@
       padding-top: 15px;
       column-gap: 35px;
       &>*{
-      flex-basis: 43%;
+        flex-basis: 43%;
+      }
     }
+    @include media-tablet{
+      column-gap: 0;
+      padding-top: 0;
+      &>*{
+        flex-basis: auto;
+      }
     }
     .footer-text{
       padding-top: 17px;
+      @include media-tablet{
+        text-align: center;
+        padding: 30px 0 7px;
+        div{
+          text-align: left;
+        }
+      }
       h2{
         color: $color-secondary;
         text-align: left;
+        @include media-tablet{
+          text-align: center;
+          padding: 0 5px;
+        }
       }
       a{
         color: $color-primary;
@@ -50,6 +73,11 @@
       }
       .footer-text__icon_location{
         margin-top: 33px;
+        @include media-tablet{
+          margin-top: 39px;
+          text-align: left;
+        }
+        
       }
       .footer-text__icon_mail::before{
         background-image: url(../assets/svg/icon-email.svg);
@@ -69,10 +97,17 @@
       height: 310px;
       background-image: url(../assets/images/footer-puppy.png);
       background-repeat: no-repeat;
+      background-size: contain;
       margin-left: 20px;
       @include media-laptop{
         margin: 59px 0 0 5px;
       }
+      @include media-tablet{
+        width: 260px;
+        height: 269px;
+        margin: 30px 0 0;
+      }
+      
     }
   }
 }

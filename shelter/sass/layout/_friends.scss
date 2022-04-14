@@ -1,20 +1,35 @@
 .friends{
   background-color: #F6F6F6;
   height: 877px;
+  @include media-tablet{
+    height: auto;
+  }
 }
 .friends-content{
   text-align: center;
   padding: 80px 0;
+  @include media-tablet{
+    padding: 42px 0 57px;
+  }
   .friends-pagination{
     padding-top: 60px;
     margin-bottom: 75px;
     @include flex-columns;
     align-items: center;
+    @include media-tablet{
+      padding-top: 42px;
+      margin-bottom: 37px;
+    }
     .pagination__item{
       @include pagination__item;
       margin: 0 35px;
       @include media-laptop{
         margin: 0 17px;
+      }
+      @include media-tablet{
+        &:nth-child(2){
+          order: -1;
+        }
       }
     }
     @include media-laptop{
@@ -22,6 +37,16 @@
       flex-wrap: nowrap;
       .pagination__item_hidden{
         display: none;
+      }
+    }
+    @include media-tablet{
+      .pagination__item_hidden2{
+        display: none;
+      }
+      flex-wrap: wrap;
+      justify-content: center;
+      .btn{
+        margin: 20px 40px;
       }
     }
   }
