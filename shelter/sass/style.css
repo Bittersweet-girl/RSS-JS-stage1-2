@@ -500,6 +500,10 @@ a {
   }
 }
 
+.header-content .header__logo {
+  z-index: 3;
+}
+
 .header-content .header__logo h2 {
   color: #F1CDB3;
   font-size: 32px;
@@ -547,12 +551,18 @@ a {
     display: block;
     position: absolute;
     text-align: center;
-    margin-top: 130px;
+    margin-top: 205px;
   }
 }
 
 .header-content .header__list .header__item {
   padding: 0px 5px;
+}
+
+@media (max-width: 767px) {
+  .header-content .header__list .header__item {
+    margin: 42px 0;
+  }
 }
 
 .header-content .header__list .header__link {
@@ -566,7 +576,7 @@ a {
 
 @media (max-width: 767px) {
   .header-content .header__list .header__link {
-    font-size: 23px;
+    font-size: 32px;
     line-height: 51px;
   }
 }

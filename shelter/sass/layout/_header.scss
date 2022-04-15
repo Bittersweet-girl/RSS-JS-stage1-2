@@ -36,6 +36,7 @@
     }
   }
   .header__logo {
+    z-index: 3;
     h2 {
       color: $color-primary;
       @include font($size: 32px, $height: 35px);
@@ -58,10 +59,13 @@
       display: block;
       position: absolute;
       text-align: center;
-      margin-top: 130px;
+      margin-top: 205px;
     }
     .header__item {
       padding: 0px 5px;
+      @include media-tablet{
+        margin: 42px 0;
+      }
     }
     .header__link {
       text-decoration: none;
@@ -70,7 +74,7 @@
         color: $color-primary;
       }
       @include media-tablet{
-        @include font($size: 23px, $height: 51px);
+        @include font($size: 32px, $height: 51px);
       }
     }
     .header__link_active {
