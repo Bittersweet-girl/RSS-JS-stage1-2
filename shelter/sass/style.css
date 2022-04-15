@@ -650,6 +650,14 @@ a {
   padding-top: 30px;
 }
 
+.header_lite .header-content .header__nav {
+  background-color: #ffffff;
+}
+
+.header_lite .header-content .header__logo {
+  z-index: 3;
+}
+
 .header_lite .header-content .header__logo h2 {
   color: #545454;
 }

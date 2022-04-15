@@ -4,12 +4,18 @@
 .pets-content{
   text-align: center;
   padding: 81px 0 40px;
+  @include media-tablet{
+    padding: 42px 0 8px;
+  }
   h1{
     font-family: $font-add;
     @include font($size: 35px, $height: 45px);
     letter-spacing: 0.06em;
     color: $color-title;
     margin: 0px;
+    @include media-tablet{
+      @include font($size: 25px, $height: 32px);
+    }
   }
   .pets-pagination{
     padding-top: 59px;
@@ -32,11 +38,21 @@
         display: none;
       }     
     }
+    @include media-tablet{
+      grid-template-columns: 1fr;
+      padding: 42px 0 0;
+      .pagination__item_hidden2{
+        display: none;
+      }  
+    }
   }
   .pets-btns{
     margin: 60px 0;
     .btn{
       margin: 0 8px;
+      @include media-tablet{
+        margin: 0 2px;
+      }
     }
     @include media-laptop{
       margin: 40px 0 36px;
