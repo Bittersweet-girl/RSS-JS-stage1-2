@@ -2,19 +2,29 @@ h1{
   font-family: $font-add;
   @include font($size: 44px, $height: 57px);
   color: $color-link;
+  font-weight: normal;
+  @include media-tablet{
+    @include font($size: 25px, $height: 32px);
+    letter-spacing: 0.06em;
+  }
 }
 h2{
   font-family: $font-add;
   @include font($size: 35px, $height: 45px);
   letter-spacing: 0.06em;
   color: $color-title;
+  font-weight: normal;
   margin: 0;
+  @include media-tablet{
+    @include font($size: 25px, $height: 32px);
+  }
 }
 h3{
   font-family: $font-add;
   @include font($size: 20px, $height: 23px);
   letter-spacing: 0.06em;
   color: $color-title;
+  font-weight: normal;
   margin: 0;
 }
 h4{
@@ -22,5 +32,6 @@ h4{
   @include font($size: 15px, $height: 17px);
   letter-spacing: 0.06em;
   color: $color-title;
+  font-weight: normal;
   margin: 20px 0;
 }
