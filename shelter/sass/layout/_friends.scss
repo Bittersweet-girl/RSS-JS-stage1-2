@@ -30,17 +30,22 @@
           justify-self: start;
         }
     }
-    .pagination__item{
-      @include pagination__item;
-      margin: 0 35px;
-      @include media-laptop{
-        margin: 0 17px;
-      }
-      @include media-tablet{
-        grid-column: 1 / 3;
-        grid-row: 1;
+    .pagination__items{
+      @include flex-columns;
+      align-items: center;
+      .pagination__item{
+        @include pagination__item;
+        margin: 0 35px;
+        @include media-laptop{
+          margin: 0 17px;
+        }
+        @include media-tablet{
+          grid-column: 1 / 3;
+          grid-row: 1;
+        }
       }
     }
+    
     @include media-laptop{
       justify-content: space-between;
       flex-wrap: nowrap;

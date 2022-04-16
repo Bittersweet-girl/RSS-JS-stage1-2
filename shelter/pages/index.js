@@ -14,3 +14,42 @@ function closeMenu() { //закрывает меню при нажатии на 
     headerNav.classList.remove('open');
   }
 }
+
+async function getData() {  //получить данные из файла
+  const pets = "Create pets.json";
+  const res = await fetch(pets);
+  const data = await res.json();
+  showData(data);
+}
+
+const pagination = document.querySelector(".pagination__items");
+let itemsPerPage = 3;
+let currentPage = 1;
+// let pages = Math.ceil(data.length / itemsPerPage);
+
+function showData(data) {
+  var rand = Math.floor(Math.random() * data.length);
+  pagination.innerHTML = "";
+  for (let i = currentPage; i <= itemsPerPage; i++){
+    pagination.innerHTML += `<div class="pagination__item">
+                  <img src="${data[rand + i].img}" alt="" />
+                  <h3>${data[rand + i].name}</h3>
+                  <button class="button btn_blank">Learn more</button>
+                </div>`;
+  }
+
+}
+
+const laptop = window.matchMedia("(max-width: 1279px)");
+const tablet = window.matchMedia("(max-width: 767px)");
+function mediaQuery() {
+  
+  if (laptop.matches) { // Если медиа запрос совпадает
+    itemsPerPage = 2;
+  } else if (tablet.matches) {
+     itemsPerPage = 1;
+  }
+}
+
+mediaQuery();
+window.addEventListener("load", getData);
