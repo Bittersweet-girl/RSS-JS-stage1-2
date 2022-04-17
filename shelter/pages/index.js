@@ -14,6 +14,9 @@ function closeMenu() { //закрывает меню при нажатии на 
     headerNav.classList.remove('open');
   }
 }
+let itemsPerPage = 3;
+let currentPage = 1;
+// let page = 1;
 
 async function getData() {  //получить данные из файла
   const pets = "Create pets.json";
@@ -22,34 +25,72 @@ async function getData() {  //получить данные из файла
   showData(data);
 }
 
+const desktop = window.matchMedia("(min-width: 1280px)");
+const laptop = window.matchMedia("(max-width: 1279px) and (min-width: 768px)");
+const tablet = window.matchMedia("(max-width: 767px) and (min-width: 320px");
+
+function mediaQuery() {
+  if (desktop.matches) { itemsPerPage = 3; getData();}
+  else if (laptop.matches) { itemsPerPage = 2; getData();}
+  else if (tablet.matches) {itemsPerPage = 1; getData();}
+  desktop.addEventListener("change", (e) => {
+  if (e.matches) {
+    itemsPerPage = 3;
+    getData();
+  }
+});
+  laptop.addEventListener("change", (e) => {
+  if (e.matches) {
+    itemsPerPage = 2;
+    getData();
+  }
+});
+tablet.addEventListener("change", (e) => {
+  if (e.matches) {
+    itemsPerPage = 1;
+    getData();
+  }
+});
+}
+// mediaQuery();
+
 const pagination = document.querySelector(".pagination__items");
-let itemsPerPage = 3;
-let currentPage = 1;
-// let pages = Math.ceil(data.length / itemsPerPage);
 
 function showData(data) {
-  var rand = Math.floor(Math.random() * data.length);
+  let pages = Math.ceil(data.length / itemsPerPage);
+  // let rand = Math.floor(Math.random() * data.length);
   pagination.innerHTML = "";
-  for (let i = currentPage; i <= itemsPerPage; i++){
+ if (currentPage < 1) currentPage = 1;
+ if (currentPage > pages) currentPage = pages;
+  for (
+    let i = (currentPage - 1) * itemsPerPage;
+    i < currentPage * itemsPerPage && i < data.length;
+    i++
+  ) {
     pagination.innerHTML += `<div class="pagination__item">
-                  <img src="${data[rand + i].img}" alt="" />
-                  <h3>${data[rand + i].name}</h3>
+                  <img src="${data[i].img}" alt="" />
+                  <h3>${data[i].name}</h3>
                   <button class="button btn_blank">Learn more</button>
                 </div>`;
   }
 
 }
 
-const laptop = window.matchMedia("(max-width: 1279px)");
-const tablet = window.matchMedia("(max-width: 767px)");
-function mediaQuery() {
-  
-  if (laptop.matches) { // Если медиа запрос совпадает
-    itemsPerPage = 2;
-  } else if (tablet.matches) {
-     itemsPerPage = 1;
-  }
+const leftButton = document.querySelector(".btn_left");
+const rightButton = document.querySelector(".btn_right");
+
+leftButton.addEventListener("click", prevPage);
+rightButton.addEventListener("click", nextPage);
+function nextPage() {
+  // if not on last page, goto next page
+  if (currentPage < 8 / itemsPerPage) ++currentPage;
+  getData();
 }
 
-mediaQuery();
-window.addEventListener("load", getData);
+function prevPage() {
+  // if not on the first page, goto previous page
+  if (currentPage > 1) --currentPage;
+  getData();
+}
+
+window.addEventListener("load", () => { mediaQuery();});
