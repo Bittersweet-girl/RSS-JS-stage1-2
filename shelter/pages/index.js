@@ -93,4 +93,5 @@ function prevPage() {
   getData();
 }
 
+
 window.addEventListener("load", () => { mediaQuery();});

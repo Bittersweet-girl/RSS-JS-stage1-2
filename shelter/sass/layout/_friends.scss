@@ -50,14 +50,8 @@
     @include media-laptop{
       justify-content: space-between;
       flex-wrap: nowrap;
-      .pagination__item_hidden{
-        display: none;
-      }
     }
     @include media-tablet{
-      .pagination__item_hidden2{
-        display: none;
-      }
       flex-wrap: wrap;
       justify-content: center;
       .btn{
