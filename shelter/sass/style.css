@@ -387,6 +387,9 @@ h4 {
 }
 
 .modal-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -403,19 +406,9 @@ h4 {
   visibility: hidden;
 }
 
-.modal-background.open {
+.modal-background.modal_open {
   visibility: visible;
   opacity: 1;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
-
-.modal-background .modal__close {
-  position: relative;
-  right: -38px;
-  top: -52px;
-  font-size: 35px;
-  padding: 5px;
 }
 
 .modal-background .modal-content {
@@ -481,6 +474,14 @@ h4 {
 
 .modal-background .modal-content .modal-text .modal-list > li span {
   color: #000;
+}
+
+.modal-background .modal-content .modal__close {
+  position: relative;
+  right: -38px;
+  top: -52px;
+  font-size: 35px;
+  padding: 5px;
 }
 
 * {

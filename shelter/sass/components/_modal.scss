@@ -1,5 +1,5 @@
 .modal-background {
-  // display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
@@ -12,19 +12,11 @@
   @extend %transition;
   visibility: hidden;
   // visibility: visible;
-  &.open {
+  
+  &.modal_open {
     visibility: visible;
     opacity: 1;
-    transition-delay: 0s;
   }
-  .modal__close {
-    position: relative;
-    right: -38px;
-    top: -52px;
-    font-size: 35px;
-    padding: 5px;
-  }
-
   .modal-content {
     position: absolute;
     top: 20%;
@@ -63,6 +55,13 @@
           }
         }
       }
+    }
+    .modal__close {
+      position: relative;
+      right: -38px;
+      top: -52px;
+      font-size: 35px;
+      padding: 5px;
     }
   }
 }

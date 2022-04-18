@@ -1,7 +1,9 @@
 import { Burger } from "../assets/js/burger.js";
 import { pets } from "../assets/js/pets.js";
+import { Modal } from "../assets/js/modal.js";
 
 Burger();
+
 
 let itemsPerPage = 3;
 let currentPage = 1;
@@ -82,4 +84,5 @@ function prevPage() {
 
 window.addEventListener("load", () => {
   mediaQuery();
+  Modal();
 });
