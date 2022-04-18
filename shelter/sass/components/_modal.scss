@@ -79,9 +79,9 @@
         &>li{
           color: $color-primary;
           margin: 10px 0;
-          // @include media-laptop{
-          //   margin: 5px 0;
-          // }
+          @include media-laptop{
+            margin: 5px 0;
+          }
           span{
             color: #000;
           }

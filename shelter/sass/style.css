@@ -515,6 +515,12 @@ h4 {
   margin: 10px 0;
 }
 
+@media (max-width: 1279px) {
+  .modal-background .modal-content .modal-text .modal-list > li {
+    margin: 5px 0;
+  }
+}
+
 .modal-background .modal-content .modal-text .modal-list > li span {
   color: #000;
 }

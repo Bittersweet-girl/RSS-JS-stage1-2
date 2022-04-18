@@ -5,11 +5,14 @@ export function Modal() {
   const closeModal = document.querySelector(".modal__close");
 
   openModal.addEventListener("click", (e) => {
+
     if (e.target.closest(".pagination__item")) {
-      console.log(e.target.querySelector("h2"));
-      createModal();
+      let title = e.target.closest(".pagination__item").querySelector("h3").innerHTML;
+      let index = pets.findIndex((el) => el.name == title);
+      createModal(index);
       modal.classList.add("modal_open");
     }
+
   });
 
   closeModal.addEventListener("click", () => {
@@ -22,8 +25,7 @@ export function Modal() {
     }
   });
   
-  function createModal() {
-    let i = 1;
+  function createModal(i) {
     const modalContent = document.querySelector(".modal-text");
     const modalImage = document.querySelector(".modal-img");
     modalImage.innerHTML = "";
