@@ -10,9 +10,7 @@
   height: 100%;
   z-index: 1;
   @extend %transition;
-  visibility: hidden;
-  // visibility: visible;
-  
+  visibility: hidden;  
   &.modal_open {
     visibility: visible;
     opacity: 1;
