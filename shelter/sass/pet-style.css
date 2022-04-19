@@ -788,8 +788,8 @@ a {
 .footer {
   background-image: url(../assets/images/footer-bg.jpg);
   background-size: 100%;
+  background-position: center 0;
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 @media (max-width: 1279px) {
