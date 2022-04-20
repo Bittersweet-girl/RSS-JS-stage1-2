@@ -10,7 +10,12 @@
   height: 100%;
   z-index: 1;
   @extend %transition;
-  visibility: hidden;  
+  visibility: hidden; 
+  &:hover{
+    .modal__close{
+      background-color: $color-primary-light;
+    }
+  } 
   &.modal_open {
     visibility: visible;
     opacity: 1;
@@ -25,6 +30,11 @@
     background-color: $color-secondary;
     color: #000;
     border-radius: 9px;
+    &:hover{
+      .modal__close {
+        background: transparent;
+      }
+    }
     @include media-laptop{
       width: 630px;
       height: 350px;

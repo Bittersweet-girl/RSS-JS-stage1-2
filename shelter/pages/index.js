@@ -72,7 +72,7 @@ leftButton.addEventListener("click", prevPage);
 rightButton.addEventListener("click", nextPage);
 function nextPage() {
   // if not on last page, goto next page
-  if (currentPage < pets.length / itemsPerPage) ++currentPage;
+  if (currentPage < Math.ceil(pets.length / itemsPerPage)) ++currentPage;
   showData();
 }
 

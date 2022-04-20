@@ -3,6 +3,7 @@ export function Modal() {
   const openModal = document.querySelector(".pagination__items");
   const modal = document.querySelector(".modal-background");
   const closeModal = document.querySelector(".modal__close");
+  const body = document.querySelector("body");
 
   openModal.addEventListener("click", (e) => {
 
@@ -11,17 +12,20 @@ export function Modal() {
       let index = pets.findIndex((el) => el.name == title);
       createModal(index);
       modal.classList.add("modal_open");
+      body.classList.add("no-scroll");
     }
 
   });
 
   closeModal.addEventListener("click", () => {
     modal.classList.remove("modal_open");
+    body.classList.remove("no-scroll");
   });
 
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.classList.remove("modal_open");
+      body.classList.remove("no-scroll");
     }
   });
   
