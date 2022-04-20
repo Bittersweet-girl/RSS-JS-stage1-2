@@ -107,6 +107,9 @@
       @include media-laptop{
         padding: 11px;
       }
+      &:hover{
+        background-color: $color-primary-light;
+      }
     }
   }
 }
