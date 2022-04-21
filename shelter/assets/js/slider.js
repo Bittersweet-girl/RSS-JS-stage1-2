@@ -1,50 +1,64 @@
 import { pets } from "./pets.js";
 
 export function Slider(itemsPerPage) {
-  let currentPage = 1;
   const pagination = document.querySelector(".pagination__items");
-  let pages = Math.ceil(pets.length / itemsPerPage);
 
+  let arr = [];
+  let arr1 = [];
+  let arr2 = [];
+
+  for (let i = 0; i < pets.length; i++) arr.push(i);
+
+  arr1 = mixarr(arr);
+  
   function showData() {
-    // let rand = Math.floor(Math.random() * pets.length);
+    let index;
+    
     pagination.innerHTML = "";
-    if (currentPage < 1) currentPage = 1;
-    if (currentPage > pages) currentPage = pages;
-    for (
-      let i = (currentPage - 1) * itemsPerPage;
-      i < currentPage * itemsPerPage && i < pets.length;
-      i++
-    ) {
-      pagination.innerHTML += `<div class="pagination__item">
-                  <img src="${pets[i].img}" alt="" />
-                  <h3>${pets[i].name}</h3>
-                  <button class="button btn_blank">Learn more</button>
-                </div>`;
+
+    for (let i = 0; i <  itemsPerPage; i++) {
+      index = mass();
+      console.log("index", index);
+      generateItem(index);
     }
   }
   showData();
 
+  function generateItem(i) {
+    pagination.innerHTML += `<div class="pagination__item">
+                  <img src="${pets[i].img}" alt="" />
+                  <h3>${pets[i].name}</h3>
+                  <button class="button btn_blank">Learn more</button>
+                </div>`;
+  }
+
   const leftButton = document.querySelector(".btn_left");
   const rightButton = document.querySelector(".btn_right");
 
-  leftButton.addEventListener("click", prevPage);
-  rightButton.addEventListener("click", nextPage);
+  leftButton.addEventListener("click", showData);
+  rightButton.addEventListener("click", showData);
 
-  function nextPage() {
-    if (currentPage < pages) {
-      ++currentPage;
-    } else {
-      currentPage = 1;
-    }
-    showData();
-  }
+  function mixarr(array) {
+  return array
+    .map((i) => [Math.random(), i])
+    .sort()
+    .map((i) => i[1]);
+}
 
-  function prevPage() {
-    if (currentPage > 1) {
-       --currentPage;
-    } else {
-      currentPage = pages;
+  function mass() {
+    let ind;
+    ind = arr1[0];
+    arr2.push(ind);
+    arr1.splice(0, 1);
+    // console.log("ind", ind);
+      // console.log("arr1", arr1, "arr2", arr2);
+
+    if (arr1.length == 0) {
+      // console.log(arr2);
+      arr1 = mixarr(arr2);
+      arr2.splice(0, arr2.length);
     }
-    showData();
+    console.log("arr1", arr1, "arr2", arr2);
+    return ind;
   }
 }
