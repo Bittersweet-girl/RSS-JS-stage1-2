@@ -2,9 +2,6 @@ import { Burger } from "../assets/js/burger.js";
 import { Modal } from "../assets/js/modal.js";
 import { Slider } from "../assets/js/slider.js";
 
-Burger();
-
-
 let itemsPerPage = 3;
 
 const desktop = window.matchMedia("(min-width: 1280px)");
@@ -22,30 +19,28 @@ function mediaQuery() {
     itemsPerPage = 1;
     Slider(itemsPerPage);
   }
-  desktop.addEventListener("change", (e) => {
-    if (e.matches) {
-      itemsPerPage = 3;
-      Slider(itemsPerPage);
-    }
-  });
-  laptop.addEventListener("change", (e) => {
-    if (e.matches) {
-      itemsPerPage = 2;
-      Slider(itemsPerPage);
-    }
-  });
-  tablet.addEventListener("change", (e) => {
-    if (e.matches) {
-      itemsPerPage = 1;
-      Slider(itemsPerPage);
-    }
-  });
+  // desktop.addEventListener("change", (e) => {
+  //   if (e.matches) {
+  //     itemsPerPage = 3;
+  //     Slider(itemsPerPage);
+  //   }
+  // });
+  // laptop.addEventListener("change", (e) => {
+  //   if (e.matches) {
+  //     itemsPerPage = 2;
+  //     Slider(itemsPerPage);
+  //   }
+  // });
+  // tablet.addEventListener("change", (e) => {
+  //   if (e.matches) {
+  //     itemsPerPage = 1;
+  //     Slider(itemsPerPage);
+  //   }
+  // });
 }
-// mediaQuery();
-
 
 window.addEventListener("load", () => {
   mediaQuery();
   Modal();
-  Slider(itemsPerPage);
+  Burger();
 });

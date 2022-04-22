@@ -17,8 +17,8 @@ export function Slider(itemsPerPage) {
     pagination.innerHTML = "";
 
     for (let i = 0; i <  itemsPerPage; i++) {
-      index = mass();
-      console.log("index", index);
+      index = generateRandomIndex();
+      // console.log("index", index);
       generateItem(index);
     }
   }
@@ -39,25 +39,23 @@ export function Slider(itemsPerPage) {
   rightButton.addEventListener("click", showData);
 
   function mixarr(array) {
-  return array
-    .map((i) => [Math.random(), i])
-    .sort()
-    .map((i) => i[1]);
-}
+    return array
+      .map((i) => [Math.random(), i])
+      .sort()
+      .map((i) => i[1]);
+  }
 
-  function mass() {
+  function generateRandomIndex() {
     let ind;
     ind = arr1[0];
     arr2.push(ind);
     arr1.splice(0, 1);
-    // console.log("ind", ind);
-      // console.log("arr1", arr1, "arr2", arr2);
 
     if (arr1.length == 0) {
-      // console.log(arr2);
       arr1 = mixarr(arr2);
       arr2.splice(0, arr2.length);
     }
+    
     console.log("arr1", arr1, "arr2", arr2);
     return ind;
   }
