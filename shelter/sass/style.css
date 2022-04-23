@@ -1164,6 +1164,11 @@ a {
   }
 }
 
+.friends-content .friends-pagination .pagination__items.flash {
+  -webkit-animation: flash 1s both;
+          animation: flash 1s both;
+}
+
 @media (max-width: 767px) {
   .friends-content .friends-pagination .pagination__items {
     -ms-grid-column: 1;
@@ -1234,6 +1239,30 @@ a {
 
 .friends-content .button {
   margin-top: 63px;
+}
+
+@-webkit-keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
 
 .help-content {

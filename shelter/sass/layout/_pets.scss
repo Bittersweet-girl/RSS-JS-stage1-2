@@ -17,7 +17,7 @@
       @include font($size: 25px, $height: 32px);
     }
   }
-  .pets-pagination{
+  .pagination__items{
     padding-top: 59px;
     display: grid;
     grid-template-rows: 1fr 1fr;
