@@ -11,6 +11,9 @@
   z-index: 1;
   @extend %transition;
   visibility: hidden; 
+  &.animate {
+    animation: animate 1s both;
+  }
   &:hover{
     .modal__close{
       background-color: $color-primary-light;
@@ -113,7 +116,21 @@
     }
   }
 }
-
-
-
+@keyframes animate {
+  
+  0% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 

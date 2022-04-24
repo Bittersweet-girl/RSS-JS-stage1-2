@@ -391,6 +391,11 @@ h4 {
   visibility: hidden;
 }
 
+.modal-background.animate {
+  -webkit-animation: animate 1s both;
+          animation: animate 1s both;
+}
+
 .modal-background:hover .modal__close {
   background-color: #FDDCC4;
 }
@@ -534,6 +539,48 @@ h4 {
 
 .modal-background .modal-content .modal__close:hover {
   background-color: #FDDCC4;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+            transform: translateY(2000px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  80% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+            transform: translateY(2000px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  80% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 * {
@@ -876,6 +923,11 @@ a {
   justify-items: center;
 }
 
+.pets-content .pagination__items.animate {
+  -webkit-animation: animate 1s both;
+          animation: animate 1s both;
+}
+
 .pets-content .pagination__items .pagination__item {
   display: block;
   border-radius: 9px;
@@ -947,6 +999,16 @@ a {
 @media (max-width: 1279px) {
   .pets-content .pets-btns {
     margin: 40px 0 36px;
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
 

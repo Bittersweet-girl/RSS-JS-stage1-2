@@ -33,8 +33,8 @@
     .pagination__items{
       @include flex-columns;
       align-items: center;
-      &.flash {
-        animation: flash 1s both;
+      &.animate {
+        animation: animate 1s both;
       }
       @include media-tablet{
           grid-column: 1 / 3;
@@ -66,14 +66,12 @@
     margin-top: 63px;
   }
 }
-@keyframes flash {
+@keyframes animate {
   0%,
-  50%,
   100% {
     opacity: 1;
   }
-  25%,
-  75% {
+  50% {
     opacity: 0;
   }
 }

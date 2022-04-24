@@ -6,17 +6,19 @@ export function Modal() {
   const body = document.querySelector("body");
 
   openModal.addEventListener("click", (e) => {
-
     if (e.target.closest(".pagination__item")) {
       let title = e.target.closest(".pagination__item").querySelector("h3").innerHTML;
       let index = pets.findIndex((el) => el.name == title);
       createModal(index);
+      modal.classList.add("animate");
       modal.classList.add("modal_open");
       body.classList.add("no-scroll");
     }
 
   });
-
+  modal.addEventListener("animationend", () => {
+    modal.classList.remove("animate");
+  });
   closeModal.addEventListener("click", () => {
     modal.classList.remove("modal_open");
     body.classList.remove("no-scroll");

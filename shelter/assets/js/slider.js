@@ -13,9 +13,9 @@ export function Slider(itemsPerPage) {
   
   function showData() {
     let index;
-    pagination.classList.remove("flash");
-    pagination.innerHTML = "";
     
+    pagination.innerHTML = "";
+    pagination.classList.add("animate");
     for (let i = 0; i <  itemsPerPage; i++) {
       index = generateRandomIndex();
       // console.log("index", index);
@@ -24,13 +24,18 @@ export function Slider(itemsPerPage) {
   }
   showData();
 
+  pagination.addEventListener("animationend", () => {
+    pagination.classList.remove("animate");
+  });
+  
   function generateItem(i) {
-    pagination.classList.add("flash");
+    
     pagination.innerHTML += `<div class="pagination__item">
                   <img src="${pets[i].img}" alt="" />
                   <h3>${pets[i].name}</h3>
                   <button class="button btn_blank">Learn more</button>
                 </div>`;
+    
   }
 
   const leftButton = document.querySelector(".btn_left");
@@ -38,7 +43,7 @@ export function Slider(itemsPerPage) {
 
   leftButton.addEventListener("click", showData);
   rightButton.addEventListener("click", () => {
-    
+    // 
     showData();
   });
 

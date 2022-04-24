@@ -406,6 +406,11 @@ h4 {
   visibility: hidden;
 }
 
+.modal-background.animate {
+  -webkit-animation: animate 1s both;
+          animation: animate 1s both;
+}
+
 .modal-background:hover .modal__close {
   background-color: #FDDCC4;
 }
@@ -549,6 +554,48 @@ h4 {
 
 .modal-background .modal-content .modal__close:hover {
   background-color: #FDDCC4;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+            transform: translateY(2000px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  80% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+            transform: translateY(2000px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  80% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 * {
@@ -1164,9 +1211,9 @@ a {
   }
 }
 
-.friends-content .friends-pagination .pagination__items.flash {
-  -webkit-animation: flash 1s both;
-          animation: flash 1s both;
+.friends-content .friends-pagination .pagination__items.animate {
+  -webkit-animation: animate 1s both;
+          animation: animate 1s both;
 }
 
 @media (max-width: 767px) {
@@ -1241,26 +1288,12 @@ a {
   margin-top: 63px;
 }
 
-@-webkit-keyframes flash {
+@keyframes animate {
   0%,
-  50%,
   100% {
     opacity: 1;
   }
-  25%,
-  75% {
-    opacity: 0;
-  }
-}
-
-@keyframes flash {
-  0%,
-  50%,
-  100% {
-    opacity: 1;
-  }
-  25%,
-  75% {
+  50% {
     opacity: 0;
   }
 }

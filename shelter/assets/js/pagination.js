@@ -31,7 +31,7 @@ export function Pagination(itemsPerPage) {
 
   function showData() {
     let index;
-    pagination.classList.remove("flash");
+    pagination.classList.add("animate");
     pagination.innerHTML = "";
     pageButton.innerHTML = "";
     for (let i = (currentPage - 1) * itemsPerPage; i < itemsPerPage * currentPage; i++) {
@@ -44,6 +44,10 @@ export function Pagination(itemsPerPage) {
   }
   showData();
 
+  pagination.addEventListener("animationend", () => {
+    pagination.classList.remove("animate");
+  });
+  
   function generateItem(i) {
     pagination.innerHTML += `<div class="pagination__item">
                   <img src="${pets[i].img}" alt="" />
@@ -99,6 +103,7 @@ export function Pagination(itemsPerPage) {
     if (currentPage <= lastPage) currentPage++;
     showData();
   });
+
   function checkActiveBtn() {
     if (currentPage == 1){
       prevButton.classList.add("btn_inactive");
