@@ -8,12 +8,10 @@ export function Slider(itemsPerPage) {
   let arr2 = [];
 
   for (let i = 0; i < pets.length; i++) arr.push(i);
-
   arr1 = mixarr(arr);
   
   function showData() {
     let index;
-    
     pagination.innerHTML = "";
     pagination.classList.add("animate");
     for (let i = 0; i <  itemsPerPage; i++) {
@@ -29,7 +27,6 @@ export function Slider(itemsPerPage) {
   });
   
   function generateItem(i) {
-    
     pagination.innerHTML += `<div class="pagination__item">
                   <img src="${pets[i].img}" alt="" />
                   <h3>${pets[i].name}</h3>
@@ -42,10 +39,7 @@ export function Slider(itemsPerPage) {
   const rightButton = document.querySelector(".btn_right");
 
   leftButton.addEventListener("click", showData);
-  rightButton.addEventListener("click", () => {
-    // 
-    showData();
-  });
+  rightButton.addEventListener("click", showData);
 
   function mixarr(array) {
     return array
@@ -62,10 +56,16 @@ export function Slider(itemsPerPage) {
 
     if (arr1.length == 0) {
       arr1 = mixarr(arr2);
+      for (let i = 0; i < 3; i++){
+        for (let j = arr2.length - 1; j > arr2.length - 4; j--){
+          if (arr1[i] == arr2[j]) {
+            arr1.push(arr1[i]);
+            arr1.splice(i, 1);
+          }
+        }
+      }
       arr2.splice(0, arr2.length);
     }
-    
-    // console.log("arr1", arr1, "arr2", arr2);
     return ind;
   }
 }
