@@ -406,18 +406,14 @@ h4 {
   visibility: hidden;
 }
 
-.modal-background.animate {
-  -webkit-animation: animate 1s both;
-          animation: animate 1s both;
-}
-
 .modal-background:hover .modal__close {
   background-color: #FDDCC4;
 }
 
 .modal-background.modal_open {
   visibility: visible;
-  opacity: 1;
+  -webkit-animation: animate 1s both;
+          animation: animate 1s both;
 }
 
 .modal-background .modal-content {

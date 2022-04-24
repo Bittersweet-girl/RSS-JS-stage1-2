@@ -11,9 +11,6 @@
   z-index: 1;
   @extend %transition;
   visibility: hidden; 
-  &.animate {
-    animation: animate 1s both;
-  }
   &:hover{
     .modal__close{
       background-color: $color-primary-light;
@@ -21,7 +18,7 @@
   } 
   &.modal_open {
     visibility: visible;
-    opacity: 1;
+    animation: animate 1s both;
   }
   .modal-content {
     position: absolute;
