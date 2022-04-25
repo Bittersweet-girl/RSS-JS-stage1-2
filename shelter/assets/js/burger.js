@@ -23,7 +23,6 @@ export function Burger() {
 
   function closeMenu() {
     //закрывает меню 
-    
       hamburger.classList.remove("open");
       headerNav.classList.remove("open");
       bg.classList.remove("open");
