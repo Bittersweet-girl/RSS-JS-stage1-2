@@ -1,4 +1,4 @@
-.button, .btn, .modal-background, a, .pets-content .pagination__items .pagination__item {
+.button, .btn, .modal-background, a, .header-content .header__burger_bg, .header-content .header__burger, .pets-content .pagination__items .pagination__item {
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out;
 }
@@ -795,6 +795,22 @@ a {
   .header-content .header__list .header__link_active {
     color: #FAFAFA;
   }
+}
+
+.header-content .header__burger_bg {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+}
+
+.header-content .header__burger_bg.open {
+  visibility: visible;
 }
 
 .header-content .header__burger {
