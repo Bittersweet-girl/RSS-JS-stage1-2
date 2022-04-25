@@ -8,33 +8,31 @@ export function Pagination(itemsPerPage) {
   const nextButton = document.querySelector(".btn_next");
   const lastButton = document.querySelector(".btn_last");
 
-  let arr = [];
-  let arr1 = [];
   let lastPage;
   let currentPage = 1;
 
   if (itemsPerPage == 8) lastPage = 6;
   if (itemsPerPage == 6) lastPage = 8;
   if (itemsPerPage == 3) lastPage = 16;
-  
-  for (let j = 0; j < 6; j++){
-    for (let i = 0; i < pets.length; i++) arr.push(i);
-    arr1 = mixarr(arr);
-  }
-  arr.splice(0, arr.length);
-  
-  console.log(arr1);
-  console.log(arr);
+
+    let arrOfNumbers = [];
+    let arrOfRandomNumbers = [];
+    let i;
+    for (i = 0; i < pets.length; i++) arrOfNumbers.push(i);
+    arrOfRandomNumbers = mixarr(arrOfNumbers);
+    arrOfNumbers.splice(0, arrOfNumbers.length);
+    for (i = 0; i < 6; i++) {
+      arrOfRandomNumbers.push(arrOfRandomNumbers[0]);
+      arrOfRandomNumbers.splice(0, 1);
+      arrOfNumbers = arrOfNumbers.concat(...arrOfRandomNumbers);
+    }
 
   function showData() {
-    let index;
     pagination.classList.add("animate");
     pagination.innerHTML = "";
     pageButton.innerHTML = "";
     for (let i = (currentPage - 1) * itemsPerPage; i < itemsPerPage * currentPage; i++) {
-      index = generateRandomIndex();
-      // console.log("index", index);
-      generateItem(index);
+      generateItem(arrOfNumbers[i]);
     }
     checkActiveBtn();
     pageButton.innerHTML = currentPage;
@@ -59,25 +57,6 @@ export function Pagination(itemsPerPage) {
       .map((i) => [Math.random(), i])
       .sort()
       .map((i) => i[1]);
-  }
-
-  function generateRandomIndex() {
-    let ind;
-    ind = arr1[0];
-    arr.push(ind);
-    arr1.splice(0, 1);
-
-    if (itemsPerPage == 8 && arr1.length == 0) {
-      arr1 = arr2.slice().reverse();
-      arr.splice(0, arr.length);
-    }
-    if ((arr1.length == 0) && (itemsPerPage == 6 || itemsPerPage == 3)) {
-      arr1 = arr.slice();
-      arr.splice(0, arr.length);
-    }
- 
-    // console.log("arr1", arr1, "arr2", arr2);
-    return ind;
   }
 
   prevButton.addEventListener("click", () => {
