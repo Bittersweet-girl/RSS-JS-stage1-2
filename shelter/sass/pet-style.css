@@ -460,6 +460,7 @@ h4 {
   width: 350px;
   padding: 60px 10px;
   letter-spacing: 0.06em;
+  overflow: auto;
 }
 
 @media (max-width: 1279px) {
@@ -479,6 +480,12 @@ h4 {
   color: #000;
 }
 
+@media (max-width: 767px) {
+  .modal-background .modal-content .modal-text h2, .modal-background .modal-content .modal-text h3 {
+    text-align: center;
+  }
+}
+
 .modal-background .modal-content .modal-text p {
   text-align: left;
   font-family: "Georgia", serif;
@@ -488,6 +495,12 @@ h4 {
   .modal-background .modal-content .modal-text p {
     font-size: 13px;
     line-height: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-background .modal-content .modal-text p {
+    text-align: justify;
   }
 }
 

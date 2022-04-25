@@ -62,21 +62,29 @@
       width: 350px;
       padding: 60px 10px;
       letter-spacing: 0.06em;
+      overflow: auto;
       @include media-laptop{
         width: 260px;
         padding: 10px 0;
       }
       @include media-tablet{
         padding-left: 10px;
+        
       }
       h2, h3{
         color: #000;
+        @include media-tablet {
+          text-align: center;
+        }
       }
       p{
         text-align: left;
         font-family: $font-add;
         @include media-laptop{
           @include font($size: 13px, $height: 14px);
+        }
+        @include media-tablet{
+          text-align: justify;
         }
       }
       .modal-list{

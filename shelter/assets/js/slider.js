@@ -3,12 +3,12 @@ import { pets } from "./pets.js";
 export function Slider(itemsPerPage) {
   const pagination = document.querySelector(".pagination__items");
 
-  let arr = [];
-  let arr1 = [];
-  let arr2 = [];
+  let arrOfNumbers = [];
+  let arrOfRandomNumbers = [];
 
-  for (let i = 0; i < pets.length; i++) arr.push(i);
-  arr1 = mixarr(arr);
+  for (let i = 0; i < pets.length; i++) arrOfNumbers.push(i);
+  arrOfRandomNumbers = mixarr(arrOfNumbers);
+  arrOfNumbers.splice(0, arrOfNumbers.length);
   
   function showData() {
     let index;
@@ -16,7 +16,6 @@ export function Slider(itemsPerPage) {
     pagination.classList.add("animate");
     for (let i = 0; i <  itemsPerPage; i++) {
       index = generateRandomIndex();
-      // console.log("index", index);
       generateItem(index);
     }
   }
@@ -50,21 +49,23 @@ export function Slider(itemsPerPage) {
 
   function generateRandomIndex() {
     let ind;
-    ind = arr1[0];
-    arr2.push(ind);
-    arr1.splice(0, 1);
+    ind = arrOfRandomNumbers[0];
+    arrOfNumbers.push(ind);
+    arrOfRandomNumbers.splice(0, 1);
 
-    if (arr1.length == 0) {
-      arr1 = mixarr(arr2);
-      for (let i = 0; i < 3; i++){
-        for (let j = arr2.length - 1; j > arr2.length - 4; j--){
-          if (arr1[i] == arr2[j]) {
-            arr1.push(arr1[i]);
-            arr1.splice(i, 1);
+    if (arrOfRandomNumbers.length == 0) {
+      arrOfRandomNumbers = mixarr(arrOfNumbers);
+      
+      for (let i = 0; i < 5; i++){
+        for (let j = arrOfNumbers.length - 1; j > arrOfNumbers.length - 4; j--){
+          if (arrOfRandomNumbers[i] == arrOfNumbers[j]) {
+            arrOfRandomNumbers.push(arrOfRandomNumbers[i]);
+            arrOfRandomNumbers.splice(i, 1);
+            i--;
           }
         }
       }
-      arr2.splice(0, arr2.length);
+      arrOfNumbers.splice(0, arrOfNumbers.length);
     }
     return ind;
   }

@@ -10,7 +10,6 @@ export function Pagination(itemsPerPage) {
 
   let arr = [];
   let arr1 = [];
-  let arr2 = [];
   let lastPage;
   let currentPage = 1;
 
@@ -18,16 +17,14 @@ export function Pagination(itemsPerPage) {
   if (itemsPerPage == 6) lastPage = 8;
   if (itemsPerPage == 3) lastPage = 16;
   
-  for (let i = 0; i < pets.length; i++) arr.push(i);
-  arr1 = mixarr(arr);
-
-  // for (let i = 0; i < 7; i++){
-  //   arr1 = mixarr(arr);
-  //   arr2.concat(...arr1);
-  // }
+  for (let j = 0; j < 6; j++){
+    for (let i = 0; i < pets.length; i++) arr.push(i);
+    arr1 = mixarr(arr);
+  }
+  arr.splice(0, arr.length);
   
-  // console.log(arr1);
-  // console.log(arr2);
+  console.log(arr1);
+  console.log(arr);
 
   function showData() {
     let index;
@@ -67,22 +64,18 @@ export function Pagination(itemsPerPage) {
   function generateRandomIndex() {
     let ind;
     ind = arr1[0];
-    arr2.push(ind);
+    arr.push(ind);
     arr1.splice(0, 1);
 
     if (itemsPerPage == 8 && arr1.length == 0) {
       arr1 = arr2.slice().reverse();
-      arr2.splice(0, arr2.length);
+      arr.splice(0, arr.length);
     }
     if ((arr1.length == 0) && (itemsPerPage == 6 || itemsPerPage == 3)) {
-      arr1 = arr2.slice();
-      arr2.splice(0, arr2.length);
+      arr1 = arr.slice();
+      arr.splice(0, arr.length);
     }
-    // if () {
-    //   arr1 = concat(...arr2);
-    //   
-    // }
-
+ 
     // console.log("arr1", arr1, "arr2", arr2);
     return ind;
   }
