@@ -41,55 +41,15 @@
       <div class="wrapper">
         <div class="pets-content">
           <h1>Our friends who <br>are looking for a house</h1>
-          <div class="pets-pagination">
-            <div class="pagination__item">
-              <img src="../assets/images/pet1.jpg" alt="">
-              <h3>Katrine</h3>
-              <button class="button btn_blank">Learn more</button>
-            </div>
-            <div class="pagination__item">
-              <img src="../assets/images/pet2.jpg" alt="">
-              <h3>Jennifer</h3>
-              <button class="button btn_blank">Learn more</button>
-            </div>
-            <div class="pagination__item">
-              <img src="../assets/images/pet3.jpg" alt="">
-              <h3>Woody</h3>
-              <button class="button btn_blank">Learn more</button>
-            </div>
-            <div class="pagination__item pagination__item_hidden2">
-              <img src="../assets/images/pet4.jpg" alt="">
-              <h3>Sophia</h3>
-              <button class="button btn_blank">Learn more</button>
-            </div>
-            <div class="pagination__item pagination__item_hidden2">
-              <img src="../assets/images/pet5.jpg" alt="">
-              <h3>Timmy</h3>
-              <button class="button btn_blank">Learn more</button>
-            </div>
-            <div class="pagination__item pagination__item_hidden2">
-              <img src="../assets/images/pet6.jpg" alt="">
-              <h3>Charly</h3>
-              <button class="button btn_blank">Learn more</button>
-            </div>
-            <div class="pagination__item pagination__item_hidden">
-              <img src="../assets/images/pet7.jpg" alt="">
-              <h3>Scarlett</h3>
-              <button class="button btn_blank">Learn more</button>
-            </div>
-            <div class="pagination__item pagination__item_hidden">
-              <img src="../assets/images/pet8.jpg" alt="">
-              <h3>Freddie</h3>
-              <button class="button btn_blank">Learn more</button>
-            </div>
+          <div class="pagination__items">
 
           </div>
           <div class="pets-btns">
-            <button class="btn btn_inactive" disabled><<</button>
-            <button class="btn btn_inactive" disabled><</button>            
-            <button class="btn btn_active">1</button>            
-            <button class="btn btn_blank">></button>            
-            <button class="btn btn_blank">>></button>            
+            <button class="btn btn_inactive btn_first" disabled><<</button>
+            <button class="btn btn_inactive btn_prev" disabled><</button>            
+            <button class="btn btn_active btn_page">1</button>            
+            <button class="btn btn_blank btn_next">></button>            
+            <button class="btn btn_blank btn_last">>></button>            
           </div>
         </div>
       </div>
@@ -115,6 +75,13 @@
       </div>
     </div>
   </footer>
-  <script type="module" src="index.js"></script>  
+  <div class="modal-background">
+    <div class="modal-content">
+      <div class="modal-img"></div>
+      <div class="modal-text"></div>
+      <button class="modal__close btn_blank btn">&times;</button>
+    </div>
+  </div>
+  <script type="module" src="pets.js"></script>  
 </body>
 </html>

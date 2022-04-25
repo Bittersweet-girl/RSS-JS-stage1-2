@@ -17,7 +17,7 @@
       @include font($size: 25px, $height: 32px);
     }
   }
-  .pets-pagination{
+  .pagination__items{
     padding-top: 59px;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -26,6 +26,9 @@
     column-gap: 40px;
     align-items: center;
     justify-items: center;
+    &.animate {
+        animation: animate 1s both;
+      }
     .pagination__item{
       @include pagination__item;
     }
@@ -59,3 +62,12 @@
     }
   }
 }    
+@keyframes animate {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
