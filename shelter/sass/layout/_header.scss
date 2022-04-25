@@ -36,7 +36,6 @@
     }
   }
   .header__logo {
-    z-index: 3;
     h2 {
       color: $color-primary;
       @include font($size: 32px, $height: 35px);
