@@ -39,7 +39,7 @@ a:hover {
   margin: 0 auto;
 }
 
-/* -----Header----- */
+/* -----------------------------Header------------------------- */
 .header {
   height: 200px;
   background-color: #F1EADC;
@@ -62,19 +62,34 @@ a:hover {
 }
 .header__title, 
 .header__tel,
-.header__basket{
+.header__basket,
+.footer-shop__title, 
+.footer-shop__tel,
+.footer-shop__basket{
   display: inline-flex;
 }
-.header__title::before {
+.header__title::before,
+.footer-shop__title::before,
+.header__tel::before,
+.footer-shop__tel::before,
+.header__basket::before,
+.footer-shop__basket::before,
+.footer-rss__logo,
+.footer-rss__git {
   content: "";
-  background-image: url('./assets/svg/logo.svg');
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 10px;
   display: inline-block;
+}
+.header__title::before,
+.footer-shop__title::before {
+  background-image: url('./assets/svg/logo.svg');
+  width: 22px;
+  height: 22px;
 }
 
 /* .header__nav {
@@ -91,25 +106,65 @@ a:hover {
   margin: 0 5px;
 }
 
-.header__tel::before {
-  content: "";
+.header__tel::before,
+.footer-shop__tel::before {
   background-image: url('./assets/svg/tel.svg');
-  width: 20px;
-  height: 20px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 10px;
-  display: inline-block;
 }
-.header__basket::before {
-  content: "";
+.header__basket::before,
+.footer-shop__basket::before {
   background-image: url('./assets/svg/bag.svg');
-  width: 20px;
-  height: 20px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 10px;
-  display: inline-block;
+}
+
+/* ------------------------------Main-------------------------- */
+
+
+/* ------------------------------Footer------------------------- */
+.footer {
+  height: 200px;
+  background-color: var(--color-background);
+}
+
+.footer-shop {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+}
+
+.footer-shop__logo {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+}
+
+/* .footer-shop__nav {
+} */
+.footer-shop__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.footer-shop__item {
+  align-items: center;
+  list-style: none;
+  margin: 0 5px;
+}
+.footer-rss {
+  text-align: center;
+}
+
+.footer-rss__logo {
+  background-image: url(./assets/svg/rs_school_js.svg);
+  width: 80px;
+  height: 70px;
+}
+
+.footer-rss__git {
+  background-image: url(./assets/svg/github.svg);
+  width: 50px;
+  height: 50px;
 }
