@@ -41,7 +41,7 @@ const baseConfig = {
                 test: /\.(png|svg|jpe?g|gif)$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: 'file-loader?name=assets/img/[name].[ext]',
                     },
                 ],
             },
