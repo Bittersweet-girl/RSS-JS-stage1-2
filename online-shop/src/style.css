@@ -1,0 +1,115 @@
+:root {
+  --color-primary: #000;
+  --color-secondary: #6E9C9F;
+  --color-active: #509498;
+  --color-main: #fff;
+  --color-background: #F1EADC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: normal;
+  color: var(--color-primary);
+  background-color: var(--color-main);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -----Header----- */
+.header {
+  height: 200px;
+  background-color: #F1EADC;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px;
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+}
+
+.header__logo {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+}
+.header__title, 
+.header__tel,
+.header__basket{
+  display: inline-flex;
+}
+.header__title::before {
+  content: "";
+  background-image: url('./assets/svg/logo.svg');
+  width: 22px;
+  height: 22px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* .header__nav {
+} */
+.header__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.header__item {
+  align-items: center;
+  list-style: none;
+  margin: 0 5px;
+}
+
+.header__tel::before {
+  content: "";
+  background-image: url('./assets/svg/tel.svg');
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  display: inline-block;
+}
+.header__basket::before {
+  content: "";
+  background-image: url('./assets/svg/bag.svg');
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  display: inline-block;
+}
