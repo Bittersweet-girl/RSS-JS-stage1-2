@@ -29,6 +29,7 @@ body {
 a {
   text-decoration: none;
   color: var(--color-primary);
+  cursor: pointer;
 }
 
 a:hover {
@@ -132,14 +133,13 @@ a:hover {
   line-height: 110%;
 }
 
-.main__filtr {
+.main__category {
   display: flex;
   justify-content: center;
   flex-direction: row;
   gap: 5px;
 }
-
-.main__item {
+.main__btn {
   display: block;
   border: #000 solid 1px;
   width: 162px;
@@ -147,22 +147,92 @@ a:hover {
   font-size: 17px;
   text-align: center;
   padding: 19px 0;
+  cursor: pointer;
+}
+.main__btn:hover{
+  background-color: rgb(110, 156, 159, 0.3);
+}
+
+.main__content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main__filtr{
+  width: 200px;
+}
+
+.main__container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.main__container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.main__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+.main__container:hover input~.main__checkmark {
+  background-color: var(--color-secondary);
+}
+
+.main__container input:checked~.main__checkmark {
+  background-color: var(--color-active);
+}
+
+.main__checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.main__container input:checked~.main__checkmark:after {
+  display: block;
+}
+
+.main__container .main__checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .main__cards {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 5px;
-  column-gap: 5px;
+  gap: 10px;
   align-items: center;
   justify-items: center;
+  padding: 20px 0;
 }
 
 .main__card {
   text-align: center;
   display: block;
-  padding: 20px;
   position: relative;
 }
 
@@ -174,6 +244,11 @@ a:hover {
   opacity: 1;
   background-color: rgb(110, 156, 159, 0.3);
 }
+.main__card img{
+  width: 80%;
+  height: 80%;
+}
+
 .main__subtitle {
   font-size: 20px;
   line-height: 28px;
@@ -188,13 +263,13 @@ a:hover {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 50%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  width: 90%;
-  height: 94%;
+  width: 80%;
+  height: 77%;
   padding-top: 50%;
 }
 

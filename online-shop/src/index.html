@@ -33,87 +33,143 @@
     <main class="main">
       <div class="wrapper">
         <h1 class="main__title">Магазин</h1>
-        <div class="main__filtr">
-          <div class="main__item">Все</div>
-          <div class="main__item">Свитшоты</div>
-          <div class="main__item">Пальто</div>
-          <div class="main__item">Футболки</div>
-          <div class="main__item">Кардиганы</div>
+        <div class="main__category">
+          <button class="main__btn">Все</button>
+          <button class="main__btn">Свитшоты</button>
+          <button class="main__btn">Пальто</button>
+          <button class="main__btn">Футболки</button>
+          <button class="main__btn">Кардиганы</button>
         </div>
-        <div class="main__cards">
-          <div class="main__card">
-            <img src="./assets/img/img 1.jpg" alt="">
-            <h3 class="main__subtitle">Футболка</h3>
-            <p class="main__price">300$</p>
-            <div class="main__card_hover">
-              <a class="main__card_link">Подробнее</a>
-            </div>
+        <div class="main__content">
+          <div class="main__filtr">
+            <h3>Фильтр</h3>
+            <form id="filters-form" role="form">
+              <div class="">
+                <h4>Цена</h4>
+                <div id="prices-label">5000 - 50000 руб.</div>
+                <br>
+                <input type="hidden" id="min-price" name="min_price" value="5000">
+                <input type="hidden" id="max-price" name="max_price" value="50000">
+                <div id="prices"></div>
+              </div>
+              <div class="">
+                <h4>Цвет</h4>
+                <div id="color">
+                  <label class="main__container"><input type="checkbox" name="color[]" value="1"> Красный<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="color[]" value="2"> Синий<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="color[]" value="3"> Желтый<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="color[]" value="4"> Белый<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="color[]" value="5"> Черный<span class="main__checkmark"></span></label>
+                </div>
+              </div>
+              <div class="">
+                <h4>Принт</h4>
+                <div id="print">
+                  <label class="main__container"><input type="checkbox" name="print[]" value="1"> Без принта<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="print[]" value="2"> Текстовый<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="print[]" value="3"> Аппликация<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="print[]" value="4"> Принт<span class="main__checkmark"></span></label>
+                </div>
+              </div>
+              <div class="">
+                <h4>Ткань</h4>
+                <div id="type">
+                  <label class="main__container"><input type="checkbox" name="type[]" value="1"> Двунитка<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="type[]" value="2"> Тринитка<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="type[]" value="3"> Хлопок<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="type[]" value="4"> Стрейч<span class="main__checkmark"></span></label>
+                </div>
+              </div>
+              
+              <!-- <div class="">
+                <h4>Сортировка</h4>
+                <br>
+                <select id="sort" name="sort" class="form-control">
+                  <option value="price_asc">По цене, сначала дешевые</option>
+                  <option value="price_desc">По цене, сначала дорогие</option>
+                  <option value="rating_desc">По популярности</option>
+                  <option value="good_asc">По названию, A-Z</option>
+                  <option value="good_desc">По названию, Z-A</option>
+                </select>
+              </div> -->
+            </form>
           </div>
-          <div class="main__card">
-            <img src="./assets/img/img 2.jpg" alt="">
-            <h3 class="main__subtitle">Футболка</h3>
-            <p class="main__price">300$</p>
-            <div class="main__card_hover">
-              <a class="main__card_link">Подробнее</a>
+          <div class="main__cards">
+            <div class="main__card">
+              <img src="./assets/img/img 1.jpg" alt="">
+              <h3 class="main__subtitle">Футболка</h3>
+              <p class="main__price">300$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+              </div>
             </div>
-          </div>
-          <div class="main__card">
-            <img src="./assets/img/img 3.jpg" alt="">
-            <h3 class="main__subtitle">Футболка</h3>
-            <p class="main__price">300$</p>
-            <div class="main__card_hover">
-              <a class="main__card_link">Подробнее</a>
+            <div class="main__card">
+              <img src="./assets/img/img 2.jpg" alt="">
+              <h3 class="main__subtitle">Футболка</h3>
+              <p class="main__price">300$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+              </div>
             </div>
-          </div>
-          <div class="main__card">
-            <img src="./assets/img/img 1.jpg" alt="">
-            <h3 class="main__subtitle">Футболка</h3>
-            <p class="main__price">300$</p>
-            <div class="main__card_hover">
-              <a class="main__card_link">Подробнее</a>
+            <div class="main__card">
+              <img src="./assets/img/img 3.jpg" alt="">
+              <h3 class="main__subtitle">Футболка</h3>
+              <p class="main__price">300$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+              </div>
             </div>
-          </div>
-          <div class="main__card">
-            <img src="./assets/img/img 2.jpg" alt="">
-            <h3 class="main__subtitle">Футболка</h3>
-            <p class="main__price">300$</p>
-            <div class="main__card_hover">
-              <a class="main__card_link">Подробнее</a>
+            <div class="main__card">
+              <img src="./assets/img/img 1.jpg" alt="">
+              <h3 class="main__subtitle">Футболка</h3>
+              <p class="main__price">300$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+              </div>
             </div>
-          </div>
-          <div class="main__card">
-            <img src="./assets/img/img 3.jpg" alt="">
-            <h3 class="main__subtitle">Футболка</h3>
-            <p class="main__price">300$</p>
-            <div class="main__card_hover">
-              <a class="main__card_link">Подробнее</a>
+            <div class="main__card">
+              <img src="./assets/img/img 2.jpg" alt="">
+              <h3 class="main__subtitle">Футболка</h3>
+              <p class="main__price">300$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+              </div>
             </div>
-          </div>
-          <div class="main__card">
-            <img src="./assets/img/img 1.jpg" alt="">
-            <h3 class="main__subtitle">Футболка</h3>
-            <p class="main__price">300$</p>
-            <div class="main__card_hover">
-              <a class="main__card_link">Подробнее</a>
+            <div class="main__card">
+              <img src="./assets/img/img 3.jpg" alt="">
+              <h3 class="main__subtitle">Футболка</h3>
+              <p class="main__price">300$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+              </div>
             </div>
-          </div>
-          <div class="main__card">
-            <img src="./assets/img/img 2.jpg" alt="">
-            <h3 class="main__subtitle">Футболка</h3>
-            <p class="main__price">300$</p>
-            <div class="main__card_hover">
-              <a class="main__card_link">Подробнее</a>
+            <div class="main__card">
+              <img src="./assets/img/img 1.jpg" alt="">
+              <h3 class="main__subtitle">Футболка</h3>
+              <p class="main__price">300$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+              </div>
             </div>
-          </div>
-          <div class="main__card">
-            <img src="./assets/img/img 3.jpg" alt="">
-            <h3 class="main__subtitle">Футболка</h3>
-            <p class="main__price">300$</p>
-            <div class="main__card_hover">
-              <a class="main__card_link">Подробнее</a>
+            <div class="main__card">
+              <img src="./assets/img/img 2.jpg" alt="">
+              <h3 class="main__subtitle">Футболка</h3>
+              <p class="main__price">300$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+              </div>
+            </div>
+            <div class="main__card">
+              <img src="./assets/img/img 3.jpg" alt="">
+              <h3 class="main__subtitle">Футболка</h3>
+              <p class="main__price">300$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+              </div>
             </div>
           </div>
         </div>
+        
       </div>
     </main>
   </main>
