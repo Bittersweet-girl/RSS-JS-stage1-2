@@ -66,7 +66,8 @@ a:hover {
 .header__tel,
 .header__basket,
 .footer-shop__title, 
-.footer-shop__tel{
+.footer-shop__tel,
+.main__filtr-title::before{
   display: inline-flex;
 }
 .header__title::before,
@@ -74,6 +75,7 @@ a:hover {
 .header__tel::before,
 .footer-shop__tel::before,
 .header__basket::before,
+.main__filtr-title::before,
 .footer-rss__logo,
 .footer-rss__git {
   content: "";
@@ -123,6 +125,24 @@ a:hover {
 .footer-shop__basket::before {
   background-image: url('./assets/svg/bag.svg');
 }
+.header__search{
+  float: right;
+}
+.header__search-form {
+  background-color: white;
+  background-image: url('./assets/svg/search.svg');
+  background-position: 1px 1px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  width: 100px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  border-radius: 3px;
+  border: #9C9C9C 1px solid;
+}
+.header__search-form:focus {
+  width: 200px;
+}
 
 /* ------------------------------Main-------------------------- */
 /* .main{
@@ -161,7 +181,35 @@ a:hover {
 .main__filtr{
   width: 200px;
 }
+.main__filtr-title::before{
+  background-image: url(./assets/svg/settings.svg);
+}
+.container {
+  position: relative;
+  pointer-events: none;
+}
 
+.container input[type="range"] {
+  height: 2em;
+  display: block;
+  margin: 0;
+}
+
+.container input[type="range"]:last-child {
+  margin-top: -2em;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+}
+
+input[type="range"]::-moz-range-thumb {
+  pointer-events: all;
+}
+
+input[type="range"]::-ms-thumb {
+  pointer-events: all;
+}
 .main__container {
   display: block;
   position: relative;
@@ -276,6 +324,28 @@ a:hover {
 .main__card_link {
   color: var(--color-main);
   font-size: 18px;
+}
+
+.hide {
+  animation-name: hide;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+  0% {
+    visibility: visible;
+    height: 200px;
+  }
+
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    max-width: 0;
+    font-size: 0;
+    margin: 0;
+  }
 }
 
 /* ------------------------------Footer------------------------- */

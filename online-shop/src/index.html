@@ -27,6 +27,9 @@
         <a class="header__tel" href="#">+7 (495) 823-54-12</a>
         <a class="header__basket" href="#">В корзине</a>
       </div>
+      <div class="header__search">
+        <input class="header__search-form" type="text" name="search" placeholder="Поиск..">
+      </div>
     </div>
   </header>
   <main>
@@ -42,15 +45,19 @@
         </div>
         <div class="main__content">
           <div class="main__filtr">
-            <h3>Фильтр</h3>
+            <h3 class="main__filtr-title">Фильтр</h3>
             <form id="filters-form" role="form">
               <div class="">
                 <h4>Цена</h4>
-                <div id="prices-label">5000 - 50000 руб.</div>
+                <div class="container">
+                  <input type="range" min="0" step="1" max="10" value="3" id="min-price" name="min_price">
+                  <input type="range" min="0" step="1" max="10" value="7" id="max-price" name="max_price">
+                </div>
+                <!-- <div id="prices-label">5000 - 50000 руб.</div>
                 <br>
-                <input type="hidden" id="min-price" name="min_price" value="5000">
-                <input type="hidden" id="max-price" name="max_price" value="50000">
-                <div id="prices"></div>
+                <input type="hidden"  value="5000">
+                <input type="hidden"  value="50000">
+                <div id="prices"></div> -->
               </div>
               <div class="">
                 <h4>Цвет</h4>
@@ -72,12 +79,12 @@
                 </div>
               </div>
               <div class="">
-                <h4>Ткань</h4>
-                <div id="type">
-                  <label class="main__container"><input type="checkbox" name="type[]" value="1"> Двунитка<span class="main__checkmark"></span></label>
-                  <label class="main__container"><input type="checkbox" name="type[]" value="2"> Тринитка<span class="main__checkmark"></span></label>
-                  <label class="main__container"><input type="checkbox" name="type[]" value="3"> Хлопок<span class="main__checkmark"></span></label>
-                  <label class="main__container"><input type="checkbox" name="type[]" value="4"> Стрейч<span class="main__checkmark"></span></label>
+                <h4>Размер</h4>
+                <div id="size">
+                  <label class="main__container"><input type="checkbox" name="type[]" value="1"> S<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="type[]" value="2"> M<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="type[]" value="3"> L<span class="main__checkmark"></span></label>
+                  <label class="main__container"><input type="checkbox" name="type[]" value="4"> XL<span class="main__checkmark"></span></label>
                 </div>
               </div>
               
@@ -98,9 +105,37 @@
             <div class="main__card">
               <img src="./assets/img/img 1.jpg" alt="">
               <h3 class="main__subtitle">Футболка</h3>
+              <p class="main__price">180$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+                <a class="main__card_link" data-id="01" data-name="Tshot" data-price="180">В корзину</a>
+              </div>
+            </div>
+            <div class="main__card">
+              <img src="./assets/img/img 2.jpg" alt="">
+              <h3 class="main__subtitle">Свитшот</h3>
+              <p class="main__price">190$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+                <a class="main__card_link" data-id="02" data-name="Tshot" data-price="190">В корзину</a>
+              </div>
+            </div>
+            <div class="main__card">
+              <img src="./assets/img/img 3.jpg" alt="">
+              <h3 class="main__subtitle">Купальник</h3>
+              <p class="main__price">200$</p>
+              <div class="main__card_hover">
+                <a class="main__card_link">Подробнее</a>
+                <a class="main__card_link" data-id="03" data-name="Tshot" data-price="200">В корзину</a>
+              </div>
+            </div>
+            <div class="main__card">
+              <img src="./assets/img/img 1.jpg" alt="">
+              <h3 class="main__subtitle">Пальто</h3>
               <p class="main__price">300$</p>
               <div class="main__card_hover">
                 <a class="main__card_link">Подробнее</a>
+                <a class="main__card_link">В корзину</a>
               </div>
             </div>
             <div class="main__card">
@@ -109,6 +144,7 @@
               <p class="main__price">300$</p>
               <div class="main__card_hover">
                 <a class="main__card_link">Подробнее</a>
+                <a class="main__card_link">В корзину</a>
               </div>
             </div>
             <div class="main__card">
@@ -117,6 +153,7 @@
               <p class="main__price">300$</p>
               <div class="main__card_hover">
                 <a class="main__card_link">Подробнее</a>
+                <a class="main__card_link">В корзину</a>
               </div>
             </div>
             <div class="main__card">
@@ -125,6 +162,7 @@
               <p class="main__price">300$</p>
               <div class="main__card_hover">
                 <a class="main__card_link">Подробнее</a>
+                <a class="main__card_link">В корзину</a>
               </div>
             </div>
             <div class="main__card">
@@ -133,6 +171,7 @@
               <p class="main__price">300$</p>
               <div class="main__card_hover">
                 <a class="main__card_link">Подробнее</a>
+                <a class="main__card_link">В корзину</a>
               </div>
             </div>
             <div class="main__card">
@@ -141,30 +180,7 @@
               <p class="main__price">300$</p>
               <div class="main__card_hover">
                 <a class="main__card_link">Подробнее</a>
-              </div>
-            </div>
-            <div class="main__card">
-              <img src="./assets/img/img 1.jpg" alt="">
-              <h3 class="main__subtitle">Футболка</h3>
-              <p class="main__price">300$</p>
-              <div class="main__card_hover">
-                <a class="main__card_link">Подробнее</a>
-              </div>
-            </div>
-            <div class="main__card">
-              <img src="./assets/img/img 2.jpg" alt="">
-              <h3 class="main__subtitle">Футболка</h3>
-              <p class="main__price">300$</p>
-              <div class="main__card_hover">
-                <a class="main__card_link">Подробнее</a>
-              </div>
-            </div>
-            <div class="main__card">
-              <img src="./assets/img/img 3.jpg" alt="">
-              <h3 class="main__subtitle">Футболка</h3>
-              <p class="main__price">300$</p>
-              <div class="main__card_hover">
-                <a class="main__card_link">Подробнее</a>
+                <a class="main__card_link">В корзину</a>
               </div>
             </div>
           </div>
