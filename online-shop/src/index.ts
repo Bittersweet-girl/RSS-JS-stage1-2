@@ -35,3 +35,7 @@ app.render();
 import { Search } from './app/filtr/search';
 const search = new Search();
 search.search();
+
+import { Filtr } from './app/filtr/filtr';
+const category = new Filtr();
+category.filtrCategories();

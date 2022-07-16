@@ -172,6 +172,10 @@ a:hover {
 .main__btn:hover{
   background-color: rgb(110, 156, 159, 0.3);
 }
+.main__btn_active{
+  background-color: var(--color-primary);
+  color: var(--color-main);
+}
 
 .main__content{
   display: flex;
