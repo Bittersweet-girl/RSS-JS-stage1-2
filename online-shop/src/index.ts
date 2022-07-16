@@ -27,11 +27,11 @@ sliders.forEach((slider) => {
     });
 });
 
-import { Card } from './app/cards/cards';
-import data from './app/DB/data';
+import { App } from './app/app';
 
-const cardContainer = document.querySelector('.main__cards') as HTMLInputElement;
-const card = new Card();
-for (let i = 0; i < data.length; i++) {
-    cardContainer.innerHTML += card.render(i);
-}
+const app = new App();
+app.render();
+
+import { Search } from './app/filtr/search';
+const search = new Search();
+search.search();

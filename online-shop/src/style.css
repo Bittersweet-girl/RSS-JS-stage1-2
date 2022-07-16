@@ -269,16 +269,19 @@ input[type="range"]::-ms-thumb {
 }
 
 .main__cards {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(3, 1fr); */
   gap: 10px;
-  align-items: center;
-  justify-items: center;
+  /* align-items: center;
+  justify-items: center; */
   padding: 20px 0;
 }
 
 .main__card {
+  width: 350px;
+  height: 490px;
   text-align: center;
   display: block;
   position: relative;
@@ -311,19 +314,22 @@ input[type="range"]::-ms-thumb {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 39%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
   width: 80%;
-  height: 78%;
+  height: 80%;
   padding-top: 50%;
 }
 
 .main__card_link {
   color: var(--color-main);
   font-size: 18px;
+}
+.main__card .hide{
+  display: none;
 }
 
 .hide {
