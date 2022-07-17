@@ -1,4 +1,5 @@
-// import { Card } from '../cards/cards';
+import { App } from '../app';
+import data from '../DB/data';
 export class Filtr {
     filtrCategories() {
         (document.querySelector('.main__category') as HTMLInputElement).addEventListener('click', (e) => {
@@ -27,30 +28,26 @@ export class Filtr {
         });
     }
     sort(value: string) {
-        const sortItems = document.querySelectorAll<HTMLInputElement>('.main__card');
         const cardContainer = document.querySelector('.main__cards') as HTMLInputElement;
-        let sortedItems: Array<HTMLInputElement> = [];
         switch (value) {
-            case 'lowe':
-                sortedItems = [...sortItems].sort((a, b) => {
-                    const priceElA = a.querySelector('.main__price') as HTMLElement;
-                    const priceElB = b.querySelector('.main__price') as HTMLElement;
-                    const getPrice = (el: Element) => parseInt(el.innerHTML.replace(/$/g, ''));
-                    return getPrice(priceElA) - getPrice(priceElB);
-                });
+            case 'low-cost':
+                data.sort((a, b) => a.price - b.price);
                 break;
-            case 'high':
-                sortedItems = [...sortItems].sort((a, b) => {
-                    const priceElA = a.querySelector('.main__price') as HTMLElement;
-                    const priceElB = b.querySelector('.main__price') as HTMLElement;
-                    const getPrice = (el: Element) => parseInt(el.innerHTML.replace(/$/g, ''));
-                    return getPrice(priceElB) - getPrice(priceElA);
-                });
+            case 'high-cost':
+                data.sort((a, b) => b.price - a.price);
                 break;
             case 'popular':
+                data.sort((a, b) => b.popular - a.popular);
+                break;
+            case 'a-z':
+                data.sort((a, b) => (a.title > b.title ? 1 : -1));
+                break;
+            case 'z-a':
+                data.sort((a, b) => (b.title > a.title ? 1 : -1));
                 break;
         }
         cardContainer.innerHTML = '';
-        return sortedItems.forEach((el) => cardContainer.appendChild(el));
+        const app = new App();
+        app.render();
     }
 }
