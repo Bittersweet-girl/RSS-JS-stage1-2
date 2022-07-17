@@ -9,7 +9,7 @@ export class App {
         let i: number;
         const cards: string[] = [];
         for (i = 0; i < data.length; i++) {
-            cards.push(card.render(i));
+            cards.push(card.render(i, data));
         }
         return (cardContainer.innerHTML = cards.join(''));
     }

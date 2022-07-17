@@ -11,7 +11,7 @@ const data: ICard[] = [
         print: 'текст',
         popular: 80,
         favorite: false,
-        img: '../../assets/img/img 2.jpg',
+        img: 'img 2.jpg',
     },
     {
         id: 102,
@@ -23,7 +23,7 @@ const data: ICard[] = [
         print: 'принт',
         popular: 30,
         favorite: false,
-        img: '../../assets/img/img 1.jpg',
+        img: 'img 1.jpg',
     },
     {
         id: 103,
@@ -35,7 +35,7 @@ const data: ICard[] = [
         print: 'однотонный',
         popular: 20,
         favorite: false,
-        img: '../../assets/img/img 3.jpg',
+        img: 'img 3.jpg',
     },
     {
         id: 104,
@@ -47,7 +47,7 @@ const data: ICard[] = [
         print: 'однотонный',
         popular: 50,
         favorite: false,
-        img: '../../assets/img/img 4.jpg',
+        img: 'img 4.jpg',
     },
     {
         id: 105,
@@ -59,7 +59,7 @@ const data: ICard[] = [
         print: 'однотонный',
         popular: 50,
         favorite: false,
-        img: '../../assets/img/img 5.jpg',
+        img: 'img 5.jpg',
     },
     {
         id: 106,
@@ -71,7 +71,7 @@ const data: ICard[] = [
         print: 'однотонный',
         popular: 40,
         favorite: false,
-        img: '../../assets/img/img 6.jpg',
+        img: 'img 6.jpg',
     },
     {
         id: 107,
@@ -83,7 +83,7 @@ const data: ICard[] = [
         print: 'однотонный',
         popular: 50,
         favorite: false,
-        img: '../../assets/img/img 7.jpeg',
+        img: 'img 7.jpeg',
     },
     {
         id: 108,
@@ -95,7 +95,7 @@ const data: ICard[] = [
         print: 'однотонный',
         popular: 30,
         favorite: false,
-        img: '../../assets/img/img 8.jpg',
+        img: 'img 8.jpg',
     },
     {
         id: 109,
@@ -107,7 +107,7 @@ const data: ICard[] = [
         print: 'однотонный',
         popular: 55,
         favorite: false,
-        img: '../../assets/img/img 9.jpg',
+        img: 'img 9.jpg',
     },
     {
         id: 110,
@@ -119,7 +119,7 @@ const data: ICard[] = [
         print: 'однотонный',
         popular: 60,
         favorite: false,
-        img: '../../assets/img/img 10.jpg',
+        img: 'img 10.jpg',
     },
     {
         id: 111,
@@ -131,7 +131,7 @@ const data: ICard[] = [
         print: 'однотонный',
         popular: 70,
         favorite: false,
-        img: '../../assets/img/img 11.jpg',
+        img: 'img 11.jpg',
     },
     {
         id: 112,
@@ -143,7 +143,7 @@ const data: ICard[] = [
         print: 'принт',
         popular: 90,
         favorite: false,
-        img: '../../assets/img/img 12.jpg',
+        img: 'img 12.jpg',
     },
 ];
 export default data;

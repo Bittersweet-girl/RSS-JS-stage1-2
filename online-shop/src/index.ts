@@ -43,5 +43,11 @@ const search = new Search();
 search.search();
 
 import { Filtr } from './app/filtr/filtr';
-const category = new Filtr();
-category.filtrCategories();
+const filtr = new Filtr();
+filtr.filtrCategories();
+
+const select = document.querySelector('#sort') as HTMLInputElement;
+
+select.addEventListener('change', () => {
+    filtr.sort(select.value);
+});

@@ -1,3 +1,4 @@
+// import { Card } from '../cards/cards';
 export class Filtr {
     filtrCategories() {
         (document.querySelector('.main__category') as HTMLInputElement).addEventListener('click', (e) => {
@@ -24,5 +25,32 @@ export class Filtr {
                 });
             }
         });
+    }
+    sort(value: string) {
+        const sortItems = document.querySelectorAll<HTMLInputElement>('.main__card');
+        const cardContainer = document.querySelector('.main__cards') as HTMLInputElement;
+        let sortedItems: Array<HTMLInputElement> = [];
+        switch (value) {
+            case 'lowe':
+                sortedItems = [...sortItems].sort((a, b) => {
+                    const priceElA = a.querySelector('.main__price') as HTMLElement;
+                    const priceElB = b.querySelector('.main__price') as HTMLElement;
+                    const getPrice = (el: Element) => parseInt(el.innerHTML.replace(/$/g, ''));
+                    return getPrice(priceElA) - getPrice(priceElB);
+                });
+                break;
+            case 'high':
+                sortedItems = [...sortItems].sort((a, b) => {
+                    const priceElA = a.querySelector('.main__price') as HTMLElement;
+                    const priceElB = b.querySelector('.main__price') as HTMLElement;
+                    const getPrice = (el: Element) => parseInt(el.innerHTML.replace(/$/g, ''));
+                    return getPrice(priceElB) - getPrice(priceElA);
+                });
+                break;
+            case 'popular':
+                break;
+        }
+        cardContainer.innerHTML = '';
+        return sortedItems.forEach((el) => cardContainer.appendChild(el));
     }
 }
