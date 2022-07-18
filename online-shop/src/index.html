@@ -47,14 +47,12 @@
         <div class="main__content">
           <div class="main__filtr">
             <h3 class="main__filtr-title">Фильтр</h3>
+            <button class="main__btn main__filtr-btn">Сбросить</button>
             <form id="filters-form" role="form">
               <label class="main__container"><input type="checkbox" name="stock" value="in-stock" class="main__checkbox"> В наличии<span class="main__checkmark"></span></label>
               <div class="">
                 <h4>Цена</h4>
-                <div class="container">
-                  <input type="range" min="0" step="1" max="10" value="3" id="min-price" name="min_price">
-                  <input type="range" min="0" step="1" max="10" value="7" id="max-price" name="max_price">
-                </div>
+                <div id="slider" class="main__slider"></div>
               </div>
               <!-- <div class="">
                 <h4>Цвет</h4>

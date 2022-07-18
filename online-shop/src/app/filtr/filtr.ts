@@ -3,6 +3,7 @@ import data from '../DB/data';
 import { ICard } from '../interfaces/card';
 
 export class Filtr {
+    private app = new App();
     filtrCategories() {
         (document.querySelector('.main__category') as HTMLInputElement).addEventListener('click', (e) => {
             if ((e.target as HTMLInputElement).classList.contains('main__btn')) {
@@ -31,36 +32,35 @@ export class Filtr {
     }
     sort(value: string) {
         const cardContainer = document.querySelector('.main__cards') as HTMLInputElement;
+        const sorted: Array<ICard> = [...data];
         switch (value) {
             case 'low-cost':
-                data.sort((a, b) => a.price - b.price);
+                sorted.sort((a, b) => a.price - b.price);
                 break;
             case 'high-cost':
-                data.sort((a, b) => b.price - a.price);
+                sorted.sort((a, b) => b.price - a.price);
                 break;
             case 'popular':
-                data.sort((a, b) => b.popular - a.popular);
+                sorted.sort((a, b) => b.popular - a.popular);
                 break;
             case 'a-z':
-                data.sort((a, b) => (a.title > b.title ? 1 : -1));
+                sorted.sort((a, b) => (a.title > b.title ? 1 : -1));
                 break;
             case 'z-a':
-                data.sort((a, b) => (b.title > a.title ? 1 : -1));
+                sorted.sort((a, b) => (b.title > a.title ? 1 : -1));
                 break;
         }
         cardContainer.innerHTML = '';
-        const app = new App();
-        app.render(data);
+        this.app.render(sorted);
     }
     filtrs() {
         const cardContainer = document.querySelector('.main__cards') as HTMLInputElement;
-        let sorted: Array<ICard> = [];
+        let sorted: Array<ICard> = [...data];
         const checkboxes = document.querySelectorAll<HTMLInputElement>('.main__checkbox');
-        const app = new App();
         checkboxes.forEach((checkbox) => {
             checkbox.addEventListener('change', () => {
                 if (checkbox.checked == true) {
-                    sorted = data
+                    sorted = sorted
                         .filter((card) => (checkbox.getAttribute('name') == 'stock' ? card.inStock == true : card))
                         // .filter((card) => {
                         //     checkbox.getAttribute('name') == 'size'
@@ -71,10 +71,16 @@ export class Filtr {
                             checkbox.getAttribute('name') == 'print' ? card.print == checkbox.value : card
                         );
                 }
-                console.log(sorted);
                 cardContainer.innerHTML = '';
-                app.render(sorted);
+                this.app.render(sorted);
             });
         });
+    }
+    reset() {
+        const cardContainer = document.querySelector('.main__cards') as HTMLInputElement;
+        cardContainer.innerHTML = '';
+        this.app.render(data);
+        const checkboxes = document.querySelectorAll<HTMLInputElement>('.main__checkbox');
+        checkboxes.forEach((item) => (item.checked = false));
     }
 }

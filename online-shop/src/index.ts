@@ -14,26 +14,6 @@ import './assets/img/img 10.jpg';
 import './assets/img/img 11.jpg';
 import './assets/img/img 12.jpg';
 
-const sliders = document.querySelectorAll<HTMLInputElement>('input[type="range"]');
-
-sliders[0].addEventListener('input', () => {
-    if (sliders[0].value > sliders[1].value) {
-        sliders[1].value = sliders[0].value;
-    }
-});
-
-sliders[1].addEventListener('input', () => {
-    if (sliders[1].value < sliders[0].value) {
-        sliders[0].value = sliders[1].value;
-    }
-});
-
-sliders.forEach((slider) => {
-    slider.addEventListener('change', () => {
-        console.log(`from ${sliders[0].value} to ${sliders[1].value}`);
-    });
-});
-
 import data from './app/DB/data';
 import { App } from './app/app';
 const app = new App();
@@ -57,3 +37,14 @@ filtr.filtrs();
 import { Cart } from './app/cart/addCart';
 const cart = new Cart();
 cart.addProduct();
+
+const resetBtn = document.querySelector('.main__filtr-btn') as HTMLInputElement;
+resetBtn.addEventListener('click', () => {
+    filtr.reset();
+});
+
+import { Slider } from './app/slider';
+const slider = new Slider();
+slider.render();
+
+import './nouislider.css';

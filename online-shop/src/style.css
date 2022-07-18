@@ -190,31 +190,14 @@ a:hover {
 .main__filtr-title::before{
   background-image: url(./assets/svg/settings.svg);
 }
-.container {
-  position: relative;
-  pointer-events: none;
+.main__filtr-btn{
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+  margin: 10px;
 }
-
-.container input[type="range"] {
-  height: 2em;
-  display: block;
-  margin: 0;
-}
-
-.container input[type="range"]:last-child {
-  margin-top: -2em;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  pointer-events: all;
-}
-
-input[type="range"]::-moz-range-thumb {
-  pointer-events: all;
-}
-
-input[type="range"]::-ms-thumb {
-  pointer-events: all;
+.main__slider{
+  margin-top: 45px;
 }
 .main__container {
   display: block;
