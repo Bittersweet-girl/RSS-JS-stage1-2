@@ -60,16 +60,15 @@ export class Filtr {
         checkboxes.forEach((checkbox) => {
             checkbox.addEventListener('change', () => {
                 if (checkbox.checked == true) {
-                    const checkboxCont = checkbox.parentElement?.textContent?.toLowerCase();
                     sorted = data
                         .filter((card) => (checkbox.getAttribute('name') == 'stock' ? card.inStock == true : card))
                         // .filter((card) => {
                         //     checkbox.getAttribute('name') == 'size'
-                        //         ? card.size.filter((sizeItem) => sizeItem == checkbox.value)
+                        //         ? card.size.find((sizeItem) => sizeItem == checkbox.value) == checkbox.value
                         //         : card;
-                        // });
+                        // })
                         .filter((card) =>
-                            checkbox.getAttribute('name') == 'print' ? card.print == checkboxCont : card
+                            checkbox.getAttribute('name') == 'print' ? card.print == checkbox.value : card
                         );
                 }
                 console.log(sorted);
