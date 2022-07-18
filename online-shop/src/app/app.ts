@@ -1,5 +1,4 @@
 import { Card } from './cards/cards';
-// import data from './DB/data';
 import { ICard } from './interfaces/card';
 
 export class App {

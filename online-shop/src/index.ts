@@ -48,9 +48,12 @@ const filtr = new Filtr();
 filtr.filtrCategories();
 
 const select = document.querySelector('#sort') as HTMLInputElement;
-
 select.addEventListener('change', () => {
     filtr.sort(select.value);
 });
 
 filtr.filtrs();
+
+import { Cart } from './app/cart/addCart';
+const cart = new Cart();
+cart.addProduct();
