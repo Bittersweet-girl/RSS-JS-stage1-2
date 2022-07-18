@@ -34,9 +34,10 @@ sliders.forEach((slider) => {
     });
 });
 
+import data from './app/DB/data';
 import { App } from './app/app';
 const app = new App();
-app.render();
+app.render(data);
 
 import { Search } from './app/filtr/search';
 const search = new Search();
@@ -51,3 +52,5 @@ const select = document.querySelector('#sort') as HTMLInputElement;
 select.addEventListener('change', () => {
     filtr.sort(select.value);
 });
+
+filtr.filtrs();

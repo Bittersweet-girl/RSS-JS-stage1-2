@@ -8,10 +8,11 @@ const data: ICard[] = [
         price: 180,
         size: ['S', 'M', 'L', 'XL'],
         color: ['красный', 'синий'],
-        print: 'текст',
+        print: 'текстовый',
         popular: 80,
         favorite: false,
         img: 'img 2.jpg',
+        inStock: false,
     },
     {
         id: 102,
@@ -24,6 +25,7 @@ const data: ICard[] = [
         popular: 30,
         favorite: false,
         img: 'img 1.jpg',
+        inStock: true,
     },
     {
         id: 103,
@@ -36,6 +38,7 @@ const data: ICard[] = [
         popular: 20,
         favorite: false,
         img: 'img 3.jpg',
+        inStock: true,
     },
     {
         id: 104,
@@ -48,11 +51,12 @@ const data: ICard[] = [
         popular: 50,
         favorite: false,
         img: 'img 4.jpg',
+        inStock: true,
     },
     {
         id: 105,
         name: 'cardegan',
-        title: 'Кардеган оверсайз',
+        title: 'Кардиган оверсайз',
         price: 320,
         size: ['L'],
         color: ['синий'],
@@ -60,6 +64,7 @@ const data: ICard[] = [
         popular: 50,
         favorite: false,
         img: 'img 5.jpg',
+        inStock: true,
     },
     {
         id: 106,
@@ -72,11 +77,12 @@ const data: ICard[] = [
         popular: 40,
         favorite: false,
         img: 'img 6.jpg',
+        inStock: true,
     },
     {
         id: 107,
         name: 'cardegan',
-        title: 'Кардеган укороченный',
+        title: 'Кардиган укороченный',
         price: 250,
         size: ['L'],
         color: ['серый', 'бежевый'],
@@ -84,6 +90,7 @@ const data: ICard[] = [
         popular: 50,
         favorite: false,
         img: 'img 7.jpeg',
+        inStock: false,
     },
     {
         id: 108,
@@ -96,11 +103,12 @@ const data: ICard[] = [
         popular: 30,
         favorite: false,
         img: 'img 8.jpg',
+        inStock: true,
     },
     {
         id: 109,
         name: 'cardegan',
-        title: 'Кардеган с вязаным рисунком',
+        title: 'Кардиган с вязаным рисунком',
         price: 200,
         size: ['L'],
         color: ['серый', 'бежевый'],
@@ -108,11 +116,12 @@ const data: ICard[] = [
         popular: 55,
         favorite: false,
         img: 'img 9.jpg',
+        inStock: true,
     },
     {
         id: 110,
         name: 'cardegan',
-        title: 'Кардеган с карманами',
+        title: 'Кардиган с карманами',
         price: 220,
         size: ['L'],
         color: ['серый', 'бежевый'],
@@ -120,6 +129,7 @@ const data: ICard[] = [
         popular: 60,
         favorite: false,
         img: 'img 10.jpg',
+        inStock: true,
     },
     {
         id: 111,
@@ -132,6 +142,7 @@ const data: ICard[] = [
         popular: 70,
         favorite: false,
         img: 'img 11.jpg',
+        inStock: false,
     },
     {
         id: 112,
@@ -144,6 +155,7 @@ const data: ICard[] = [
         popular: 90,
         favorite: false,
         img: 'img 12.jpg',
+        inStock: true,
     },
 ];
 export default data;

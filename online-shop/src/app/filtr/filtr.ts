@@ -1,5 +1,7 @@
 import { App } from '../app';
 import data from '../DB/data';
+import { ICard } from '../interfaces/card';
+
 export class Filtr {
     filtrCategories() {
         (document.querySelector('.main__category') as HTMLInputElement).addEventListener('click', (e) => {
@@ -48,6 +50,32 @@ export class Filtr {
         }
         cardContainer.innerHTML = '';
         const app = new App();
-        app.render();
+        app.render(data);
+    }
+    filtrs() {
+        const cardContainer = document.querySelector('.main__cards') as HTMLInputElement;
+        let sorted: Array<ICard> = [];
+        const checkboxes = document.querySelectorAll<HTMLInputElement>('.main__checkbox');
+        const app = new App();
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked == true) {
+                    const checkboxCont = checkbox.parentElement?.textContent?.toLowerCase();
+                    sorted = data
+                        .filter((card) => (checkbox.getAttribute('name') == 'stock' ? card.inStock == true : card))
+                        // .filter((card) => {
+                        //     checkbox.getAttribute('name') == 'size'
+                        //         ? card.size.filter((sizeItem) => sizeItem == checkbox.value)
+                        //         : card;
+                        // });
+                        .filter((card) =>
+                            checkbox.getAttribute('name') == 'print' ? card.print == checkboxCont : card
+                        );
+                }
+                console.log(sorted);
+                cardContainer.innerHTML = '';
+                app.render(sorted);
+            });
+        });
     }
 }

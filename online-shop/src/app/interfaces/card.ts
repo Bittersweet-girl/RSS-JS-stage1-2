@@ -9,4 +9,5 @@ export interface ICard {
     popular: number;
     favorite: boolean;
     img: string;
+    inStock: boolean;
 }

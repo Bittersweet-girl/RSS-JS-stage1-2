@@ -1,8 +1,9 @@
 import { Card } from './cards/cards';
-import data from './DB/data';
+// import data from './DB/data';
+import { ICard } from './interfaces/card';
 
 export class App {
-    render() {
+    render(data: Array<ICard>) {
         const cardContainer = document.querySelector('.main__cards') as HTMLInputElement;
 
         const card = new Card();
