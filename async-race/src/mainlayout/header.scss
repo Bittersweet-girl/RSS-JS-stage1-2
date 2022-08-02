@@ -10,10 +10,12 @@
         text-decoration: none;
         color: black;
         font-weight: bold;
-        background-color: #baedff;
+        background-color: #ffffff;
         padding: 8px 30px;
         text-transform: uppercase;
         border-radius: 3px;
+        border: #000 solid 1px;
+        box-shadow: 0 4px 1px rgba(138, 138, 138, 0.5);
         transition: transform 0.2s ease-in-out;
         margin-top: 10px;
     }

@@ -16,15 +16,16 @@
 .btn {
     font-family: "Roboto", sans-serif;
     display: inline-block;
-    color: #333;
-    background-color: #baedff;
+    color: black;
+    border: #000 solid 1px;
+    border-radius: 3px;
+    background-color: #fff;
     font-weight: bold;
     padding: 12px 15px;
     margin: 0 5px;
     text-transform: uppercase;
     font-weight: bold;
-    border: none;
-    box-shadow: 0 4px 1px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 1px rgba(138, 138, 138, 0.5);
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
     &:active {
@@ -35,6 +36,8 @@
         opacity: 0.5;
         transform: translateY(4px);
         box-shadow: none;
+        border: none;
+        cursor: auto;
     }
 }
 .garage-inputs__create ,
