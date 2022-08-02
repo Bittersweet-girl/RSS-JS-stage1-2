@@ -28,16 +28,15 @@
         display: block;
         height: 40px;
         width: 100%;
-        background: #1b1a20;
+        background: #fff;
         padding: 15px;
-        color: #fff;
+        color: black;
         font-family: Roboto;
         transition: 0.1s;
         cursor: default;
         font-size: 15px;
         cursor: text;
         position: relative;
-        border: 0;
     }
     &-race-btn,
     &-reset-btn {
