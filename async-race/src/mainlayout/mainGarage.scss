@@ -1,18 +1,65 @@
-/* .garage {}
+.garage{
+    padding: 10px 0 0 20px ;
+    &-inputs{
+        max-width: 500px;
+    }
+    &__buttons {
+        max-width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+        }
+    &-inputs__create ,
+    &-inputs__update {
+        position: relative;
+        display: flex;
+        margin: 5px;
+        input[type="color"] {
+            width: 20%;
+            height: 40px;
+            border: 0;
+            margin-left: 10px;
+        }
+    }
 
-{}
+    &-create-text,
+    &-update-text {
+        display: block;
+        height: 40px;
+        width: 100%;
+        background: #1b1a20;
+        padding: 15px;
+        color: #fff;
+        font-family: Roboto;
+        transition: 0.1s;
+        cursor: default;
+        font-size: 15px;
+        cursor: text;
+        position: relative;
+        border: 0;
+    }
+    &-race-btn,
+    &-reset-btn {
+        width: 25%;
+    }
+    &-generate-btn {
+        width: 45%;
+    }
+    &-content{
+        padding-top: 20px;
+    }
+    &-pagination{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    &-pagination__title{
+        margin-right: 10px;
+    }
+}
 
-.garage-create-color {} */
-.garage-inputs{
-    max-width: 500px;
-}
-.garage__buttons {
-    max-width: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
-}
+
 .btn {
     font-family: "Roboto", sans-serif;
     display: inline-block;
@@ -39,47 +86,4 @@
         border: none;
         cursor: auto;
     }
-}
-.garage-inputs__create ,
-.garage-inputs__update {
-    position: relative;
-    display: flex;
-    margin: 5px;
-    input[type="color"] {
-        width: 20%;
-        height: 40px;
-        background-color: #baedff;
-        border: 0;
-        margin-left: 10px;
-    }
-}
-
-.garage-create-text,
-.garage-update-text {
-    display: block;
-    height: 40px;
-    width: 100%;
-    background: #1b1a20;
-    padding: 15px;
-    color: #fff;
-    font-family: Roboto;
-    transition: 0.1s;
-    cursor: default;
-    font-size: 15px;
-    cursor: text;
-    position: relative;
-    border: 0;
-}
-/* .garage-create-button {}
- {}
-
-.garage-update-color {}
-.garage-update-button {}
- */
-.garage-race-btn,
-.garage-reset-btn {
-    width: 25%;
-}
-.garage-generate-btn {
-    width: 45%;
 }
