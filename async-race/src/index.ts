@@ -1,4 +1,4 @@
-import './index.css';
+import './index.scss';
 import makeMainLayout from './mainlayout/mainlayout';
 
 window.addEventListener('DOMContentLoaded', () => {

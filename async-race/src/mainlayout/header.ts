@@ -1,4 +1,4 @@
-import './header.css';
+import './header.scss';
 
 export default function makeHeader(): string {
   return `<header class="header">

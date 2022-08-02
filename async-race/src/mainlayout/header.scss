@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 30px 10px;
+    position: relative;
+    gap: 10px;
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        background-color: #baedff;
+        padding: 8px 30px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        transition: transform 0.2s ease-in-out;
+        margin-top: 10px;
+    }
+}
+

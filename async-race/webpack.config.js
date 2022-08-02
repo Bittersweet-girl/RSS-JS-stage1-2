@@ -7,49 +7,49 @@ const EslingPlugin = require("eslint-webpack-plugin");
 
 
 const baseConfig = {
-  entry: path.resolve(__dirname, "./src/index"),
-  mode: "development",
+  entry: path.resolve(__dirname, './src/index'),
+  mode: 'development',
   module: {
     rules: [
       {
         test: /\.[tj]s$/,
-        use: "ts-loader",
+        use: 'ts-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: ['.ts', '.js'],
   },
   output: {
-    filename: "index.js",
-    path: path.resolve(__dirname, "./dist"),
+    filename: 'index.js',
+    path: path.resolve(__dirname, './dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/index.html"),
-      filename: "index.html",
+      template: path.resolve(__dirname, './src/index.html'),
+      filename: 'index.html',
     }),
-    new EslingPlugin({ extensions: "ts" }),
-    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
+    new EslingPlugin({ extensions: 'ts' }),
+    new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new CopyPlugin({
-      patterns: [{ from: "src/assets", to: "./dist/assets" }],
+      patterns: [{ from: 'src/assets', to: './dist/assets' }],
     }),
   ],
 };
