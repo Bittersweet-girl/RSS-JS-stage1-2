@@ -17,6 +17,6 @@ export function renderCar(car: ICar) {
   </div>
   <div class="garage__item-road">
     <div class="garage__item-car" id="${car.id}">${carImage(car.color)}</div>
-    <div class="garage__item-finish"><img src="./src/assets/svg/flag-finish.svg" alt=""></div>
+    <div class="garage__item-finish"><img src="./assets/flag-finish.svg" alt=""></div>
   </div>`;
 }

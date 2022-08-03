@@ -16,6 +16,15 @@
             height: 50px;
         }
     }
+    &-finish{
+        margin-right: 50px;
+        width: 50px;
+        height: 50px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 .btn{
     &-small {
