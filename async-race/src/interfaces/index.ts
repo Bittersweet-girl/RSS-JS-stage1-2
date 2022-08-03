@@ -3,3 +3,7 @@ export interface ICar {
   name: string;
   color: string;
 }
+export interface ICreateCar {
+  name: string;
+  color: string;
+}

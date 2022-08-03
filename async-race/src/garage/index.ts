@@ -23,6 +23,8 @@ export async function makeGarageTitle(page: number, limit: number) {
 
 export function renderGarageResult() {
   makeGarageTitle(1, 7).then((res) => {
-    (document.querySelector('.garage-content') as HTMLElement).innerHTML = res;
+    const garageContent = document.querySelector('.garage-content') as HTMLElement;
+    garageContent.innerHTML = '';
+    garageContent.innerHTML = res;
   });
 }
