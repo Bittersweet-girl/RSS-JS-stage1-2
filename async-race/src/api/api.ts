@@ -11,3 +11,18 @@ export const createCarApi = async (body: object) => {
     })
   ).json();
 };
+
+export const getCarApi = async (id: number) => {
+  return (await fetch(`${garageURL}/${id}`)).json();
+};
+
+export const updateCarApi = async (id: number, body: object) =>
+  (
+    await fetch(`${garageURL}/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(body),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  ).json();
