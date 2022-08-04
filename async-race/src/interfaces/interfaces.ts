@@ -3,3 +3,9 @@ export interface ICar {
   name: string;
   color: string;
 }
+export interface IWinner {
+  id: string;
+  wins: number;
+  time: number;
+  car: ICar;
+}
