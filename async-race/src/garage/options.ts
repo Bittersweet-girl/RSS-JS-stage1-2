@@ -16,5 +16,7 @@ export function createCar() {
   createButton.addEventListener('click', async () => {
     await createCarApi({ name, color });
     renderGarageResult();
+    inputColor.value = '';
+    inputName.value = '';
   });
 }

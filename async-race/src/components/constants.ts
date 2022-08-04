@@ -1,5 +1,7 @@
 const startURL = 'http://127.0.0.1:3000';
 export const garageURL = `${startURL}/garage`;
+export const CARSPERPAGE = 7;
+
 export const MODELS = [
   'Acura',
   'Alfa Romeo',
