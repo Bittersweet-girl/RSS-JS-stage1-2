@@ -1,5 +1,5 @@
 import './mainGarage.scss';
-import { renderGarageResult } from '../garage';
+import { renderGarageResult } from '../garage/garage';
 
 export function makeMainGarage(): string {
   return `<section class="garage">

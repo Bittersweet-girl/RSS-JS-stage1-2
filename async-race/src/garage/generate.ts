@@ -1,6 +1,6 @@
 import { MODELS, NAMES } from '../components/constants';
 import { createCarApi } from '../api/api';
-import { renderGarageResult } from '.';
+import { renderGarageResult } from './garage';
 
 export const getRandomNAme = () => {
   const model = MODELS[Math.floor(Math.random() * MODELS.length)];

@@ -1,5 +1,5 @@
 import { garageURL } from '../components/constants';
-import { ICar } from '../interfaces';
+import { ICar } from '../interfaces/interfaces';
 import { renderCar } from '../components/car';
 
 export async function makeGarageTitle(page: number, limit: number) {

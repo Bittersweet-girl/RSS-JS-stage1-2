@@ -1,5 +1,5 @@
 import './car.scss';
-import { ICar } from '../interfaces';
+import { ICar } from '../interfaces/interfaces';
 import { carImage } from './carImage';
 
 export function renderCar(car: ICar) {

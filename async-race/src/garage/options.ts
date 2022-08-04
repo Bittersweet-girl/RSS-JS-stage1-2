@@ -1,5 +1,5 @@
 import { createCarApi } from '../api/api';
-import { renderGarageResult } from '.';
+import { renderGarageResult } from './garage';
 
 export function createCar() {
   let color = '#ffffff';
