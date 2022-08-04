@@ -1,14 +1,17 @@
 .garage{
     padding: 10px 0 0 20px ;
+    &-options{
+        display: flex;
+    }
     &-inputs{
-        max-width: 500px;
+       width: 500px; 
     }
     &__buttons {
-        max-width: 500px;
+        width: 500px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
-        margin-top: 10px;
+        margin-left: 30px;
         }
     &-inputs__create ,
     &-inputs__update {
@@ -43,7 +46,7 @@
         width: 25%;
     }
     &-generate-btn {
-        width: 45%;
+        width: 52%;
     }
     &-content{
         padding-top: 20px;
