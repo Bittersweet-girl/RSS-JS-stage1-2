@@ -21,9 +21,12 @@ export const generateRandomCars = (count = 100) =>
   new Array(count).fill(1).map(() => ({ name: getRandomNAme(), color: getRandomColor() }));
 
 export function generate() {
-  const carArray = generateRandomCars();
-  carArray.map(async (car) => {
-    return createCarApi(car);
+  const generateCars = document.querySelector('.garage-generate-btn') as HTMLButtonElement;
+  generateCars.addEventListener('click', () => {
+    const carArray = generateRandomCars();
+    carArray.map(async (car) => {
+      return createCarApi(car);
+    });
+    renderGarageResult();
   });
-  renderGarageResult();
 }

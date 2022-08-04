@@ -1,6 +1,6 @@
 import './header.scss';
 
-export default function makeHeader(): string {
+export function makeHeader(): string {
   return `<header class="header">
               <a href="#/" class="header__link">Garage</a>
               <h1>Acync Race</h1>

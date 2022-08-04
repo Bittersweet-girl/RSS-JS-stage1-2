@@ -1,5 +1,5 @@
 import './index.scss';
-import makeMainLayout from './mainlayout/mainlayout';
+import { makeMainLayout } from './mainlayout/mainlayout';
 
 window.addEventListener('DOMContentLoaded', () => {
   makeMainLayout();
