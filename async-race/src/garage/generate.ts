@@ -4,7 +4,7 @@ import { renderGarageResult } from './garage';
 
 export const getRandomNAme = () => {
   const model = MODELS[Math.floor(Math.random() * MODELS.length)];
-  const name = NAMES[Math.floor(Math.random() * MODELS.length)];
+  const name = NAMES[Math.floor(Math.random() * NAMES.length)];
   return `${model} ${name}`;
 };
 

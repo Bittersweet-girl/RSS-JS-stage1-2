@@ -1,7 +1,8 @@
 import { prevPage, nextPage } from '../components/pagination';
-import { getCarApi } from '../api/api';
+import { getCarApi, deleteCarApi } from '../api/api';
 import { ICar } from '../interfaces/interfaces';
 import { updateCar } from './options';
+import { renderGarageResult } from './garage';
 
 export function garageHandler() {
   const garageContent = document.querySelector('.garage-content') as HTMLElement;
@@ -18,6 +19,11 @@ export function garageHandler() {
         (document.querySelector('.garage-update-button') as HTMLButtonElement).disabled = false;
         updateCar(id, res);
       });
+    }
+    if ((e.target as Element).classList.contains('garage__item-remove')) {
+      const id = Number((e.target as Element).getAttribute('data-id'));
+      deleteCarApi(id);
+      renderGarageResult();
     }
   });
 }

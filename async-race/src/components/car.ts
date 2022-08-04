@@ -6,8 +6,7 @@ export function renderCar(car: ICar) {
   return `
   <div class="garage__item-changes">
     <button class="btn btn-small garage__item-select" data-id="${car.id}">Select</button>
-    <button id="remove" class="btn btn-small garage__item-remove" data-id="${car.id}">
-    Remove</button>
+    <button class="btn btn-small garage__item-remove" data-id="${car.id}">Remove</button>
     <span>${car.name}</span>
   </div>
   <div class="garage__item-handles">
