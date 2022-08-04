@@ -13,7 +13,7 @@ export async function makeGarageTitle(page: number, limit: number) {
     <h3>In garage ${resAllCars.length} cars</h3>
     <div class="garage-pagination">
         <h3 class="garage-pagination__title">Page #${page}</h3>
-        <button class="btn btn-prev" disabled="">Prev</button>
+        <button class="btn btn-prev">Prev</button>
         <button class="btn btn-next">Next</button>
     </div>
     <div class="garage-content__items">

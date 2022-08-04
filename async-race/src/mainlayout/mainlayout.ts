@@ -2,6 +2,7 @@ import { makeHeader } from './header';
 import { makeMainGarage } from './mainGarage';
 import { createCar } from '../garage/options';
 import { generate } from '../garage/generate';
+import { garageHandler } from '../garage/garageHandler';
 
 export function makeMainLayout() {
   const rootElement: HTMLElement = document.body;
@@ -11,5 +12,6 @@ export function makeMainLayout() {
   rootElement.appendChild(main);
   createCar();
   generate();
+  garageHandler();
   return rootElement;
 }
