@@ -1,5 +1,5 @@
 import { engineURL, garageURL, winnersURL } from '../components/constants';
-import { ICar } from '../interfaces/interfaces';
+import { ICar, IDrive } from '../interfaces/interfaces';
 
 async function createCarApi(body: object): Promise<ICar> {
   return (
@@ -38,7 +38,7 @@ async function startEngineApi(id: number) {
 const stopEngineApi = async (id: number) =>
   (await fetch(`${engineURL}?id=${id}&status=stopped`, { method: 'PATCH' })).json();
 
-async function driveApi(id: number) {
+async function driveApi(id: number): Promise<IDrive> {
   const res = await fetch(`${engineURL}?id=${id}&status=drive`, { method: 'PATCH' }).catch();
   return res.status !== 200 ? { success: false } : { ...(await res.json()) };
 }

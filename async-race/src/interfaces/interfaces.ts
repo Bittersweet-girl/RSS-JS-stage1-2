@@ -16,7 +16,12 @@ interface IState {
   stopped?: boolean;
 }
 interface IEngine {
-  velocity?: number,
-  distance?: number,
+  velocity?: number;
+  distance?: number;
 }
-export { ICar, IWinner, IState, IEngine };
+interface IDrive {
+  success?: string;
+  id?: number;
+  animationTime?: number;
+}
+export { ICar, IWinner, IState, IEngine, IDrive };
