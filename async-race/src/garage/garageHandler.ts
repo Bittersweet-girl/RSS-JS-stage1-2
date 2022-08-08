@@ -4,6 +4,7 @@ import { ICar } from '../interfaces/interfaces';
 import { updateCar } from './options';
 import { renderGarageResult } from './garage';
 import { startEngine } from '../car/startEngine';
+import { stopEngine } from '../car/stopEngine';
 
 export function garageHandler() {
   const garageContent = document.querySelector('.garage-content') as HTMLElement;
@@ -37,8 +38,8 @@ export function garageHandler() {
       stopBtn.disabled = false;
     }
     if ((e.target as Element).classList.contains('garage__item-stop')) {
-      // const id = Number((e.target as Element).getAttribute('data-id'));
-
+      const id = Number((e.target as Element).getAttribute('data-id'));
+      stopEngine(id);
       startBtn.disabled = false;
       stopBtn.disabled = true;
     }
