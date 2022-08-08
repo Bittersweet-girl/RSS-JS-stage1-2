@@ -1,0 +1,23 @@
+.garage-popup {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+}
+.garage-popup-content{
+    background-color: #F1EADC;
+    border-radius: 4px;
+    padding: 0 10px 0 10px;
+    width: 450px;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

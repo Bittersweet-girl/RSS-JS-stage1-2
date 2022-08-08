@@ -1,5 +1,6 @@
 import './mainGarage.scss';
 import { renderGarageResult } from '../garage/garage';
+import { renderPopup } from './popup';
 
 export function makeMainGarage(): string {
   return `<section class="garage">
@@ -24,6 +25,9 @@ export function makeMainGarage(): string {
     </div>
     <div class="garage-content">
       ${renderGarageResult()}
+    </div>
+    <div class="garage-popup">
+      ${renderPopup()}
     </div>
     </section>`;
 }
