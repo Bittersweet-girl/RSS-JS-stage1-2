@@ -1,9 +1,17 @@
+import { IState } from '../interfaces/interfaces';
+
 const startURL = 'http://127.0.0.1:3000';
 const garageURL = `${startURL}/garage`;
 const winnersURL = `${startURL}/winners`;
 const engineURL = `${startURL}/engine`;
 const CARSPERPAGE = 7;
 const WINNERSSPERPAGE = 10;
+const STATE: IState = {
+  id: 1,
+  end: true,
+  distance: 0,
+  stopped: false,
+};
 
 const MODELS = [
   'Acura',
@@ -174,4 +182,4 @@ const NAMES = [
   'Creta',
   'Solaris',
 ];
-export { engineURL, winnersURL, garageURL, CARSPERPAGE, WINNERSSPERPAGE, MODELS, NAMES };
+export { engineURL, winnersURL, garageURL, CARSPERPAGE, WINNERSSPERPAGE, MODELS, NAMES, STATE };

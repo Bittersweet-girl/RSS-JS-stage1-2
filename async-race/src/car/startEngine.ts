@@ -1,9 +1,8 @@
 import { driveApi, startEngineApi } from '../api/api';
+import { STATE } from '../components/constants';
 import { getDistanceBetweenElement } from '../components/distance';
-import { IState } from '../interfaces/interfaces';
 
 export async function startEngine(id: number) {
-  const state: IState = {};
   const { velocity, distance } = await startEngineApi(id);
 
   const animationTime = Math.round(distance / velocity);
@@ -16,23 +15,23 @@ export async function startEngine(id: number) {
   function step(timeStep: number) {
     if (!start) start = timeStep;
     const time = timeStep - start;
-    const passed = Math.round(time * (distance / animationTime));
+    const passed = Math.round(time * (HTML_DISTANCE / animationTime));
     carImg.style.transform = `translate(${Math.min(passed, HTML_DISTANCE)}px)`;
-    state.distance = passed;
+    STATE.distance = passed;
     if (passed < HTML_DISTANCE) {
-      state.id = window.requestAnimationFrame(step);
-    } else state.end = true;
+      STATE.id = window.requestAnimationFrame(step);
+    } else STATE.end = true;
   }
   if (Number(carImg.id) === id && Number(flagImg.getAttribute('data-id')) === id) {
     HTML_DISTANCE = Math.floor(getDistanceBetweenElement(carImg, flagImg)) + 90;
-    state.end = false;
-    state.id = window.requestAnimationFrame(step);
+    STATE.end = false;
+    STATE.id = window.requestAnimationFrame(step);
   }
   const { success } = await driveApi(id);
   if (!success) {
-    state.end = await true;
-    await window.cancelAnimationFrame(state.id as number);
+    STATE.end = await true;
+    await window.cancelAnimationFrame(STATE.id as number);
   }
-  if (!state.stopped) return { success, id, animationTime };
+  if (!STATE.stopped) return { success, id, animationTime };
   return {};
 }
