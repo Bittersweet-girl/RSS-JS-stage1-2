@@ -1,7 +1,7 @@
-import { garageURL, winnersURL } from '../components/constants';
+import { engineURL, garageURL, winnersURL } from '../components/constants';
 import { ICar } from '../interfaces/interfaces';
 
-export async function createCarApi(body: object): Promise<ICar> {
+async function createCarApi(body: object): Promise<ICar> {
   return (
     await fetch(garageURL, {
       method: 'POST',
@@ -13,11 +13,11 @@ export async function createCarApi(body: object): Promise<ICar> {
   ).json();
 }
 
-export const getCarApi = async (id: number): Promise<ICar> => {
+const getCarApi = async (id: number): Promise<ICar> => {
   return (await fetch(`${garageURL}/${id}`)).json();
 };
 
-export const updateCarApi = async (id: number, body: object) =>
+const updateCarApi = async (id: number, body: object) =>
   (
     await fetch(`${garageURL}/${id}`, {
       method: 'PUT',
@@ -28,8 +28,31 @@ export const updateCarApi = async (id: number, body: object) =>
     })
   ).json();
 
-export const deleteCarApi = async (id: number) =>
+const deleteCarApi = async (id: number) =>
   (await fetch(`${garageURL}/${id}`, { method: 'DELETE' })).json();
 
-export const deleteWinnerApi = async (id: number) =>
+async function startEngineApi(id: number) {
+  return (await fetch(`${engineURL}?id=${id}&status=started`, { method: 'PATCH' })).json();
+}
+
+const stopEngineApi = async (id: number) =>
+  (await fetch(`${engineURL}?id=${id}&status=stopped`, { method: 'PATCH' })).json();
+
+async function driveApi(id: number) {
+  const res = await fetch(`${engineURL}?id=${id}&status=drive`, { method: 'PATCH' }).catch();
+  return res.status !== 200 ? { success: false } : { ...(await res.json()) };
+}
+
+const deleteWinnerApi = async (id: number) =>
   (await fetch(`${winnersURL}/${id}`, { method: 'DELETE' })).json();
+
+export {
+  createCarApi,
+  getCarApi,
+  updateCarApi,
+  deleteCarApi,
+  startEngineApi,
+  stopEngineApi,
+  driveApi,
+  deleteWinnerApi,
+};

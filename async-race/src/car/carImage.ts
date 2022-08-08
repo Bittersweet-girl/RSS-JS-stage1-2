@@ -1,6 +1,6 @@
-export function carImage(color: string): string {
+export function carImage(color: string, id: number): string {
   return `
-  <svg class="garage__item-car_svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+  <svg class="garage__item-car_svg"  id="${id}" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 511.998 511.998" style="enable-background:new 0 0 511.998 511.998;" xml:space="preserve">
   <g><g>

@@ -1,10 +1,11 @@
 const startURL = 'http://127.0.0.1:3000';
-export const garageURL = `${startURL}/garage`;
-export const winnersURL = `${startURL}/winners`;
-export const CARSPERPAGE = 7;
-export const WINNERSSPERPAGE = 10;
+const garageURL = `${startURL}/garage`;
+const winnersURL = `${startURL}/winners`;
+const engineURL = `${startURL}/engine`;
+const CARSPERPAGE = 7;
+const WINNERSSPERPAGE = 10;
 
-export const MODELS = [
+const MODELS = [
   'Acura',
   'Alfa Romeo',
   'Alpine',
@@ -113,7 +114,7 @@ export const MODELS = [
   'Xpeng',
   'Zotye',
 ];
-export const NAMES = [
+const NAMES = [
   'Durango',
   'Ram',
   'Challenger',
@@ -173,3 +174,4 @@ export const NAMES = [
   'Creta',
   'Solaris',
 ];
+export { engineURL, winnersURL, garageURL, CARSPERPAGE, WINNERSSPERPAGE, MODELS, NAMES };

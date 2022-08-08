@@ -1,6 +1,6 @@
 import { garageURL, CARSPERPAGE } from '../components/constants';
 import { ICar } from '../interfaces/interfaces';
-import { renderCar } from '../components/car';
+import { renderCar } from '../car/car';
 
 export async function makeGarageTitle(page: number, limit: number) {
   const response = await fetch(`${garageURL}?_page=${page}&_limit=${limit}`);

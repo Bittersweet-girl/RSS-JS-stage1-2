@@ -10,12 +10,15 @@ export function renderCar(car: ICar) {
     <span>${car.name}</span>
   </div>
   <div class="garage__item-handles">
-    <button id="start" data-id="${car.id}" class="btn btn-small garage__item-start">Start</button>
-    <button id="stop" data-id="${car.id}" class="btn btn-small garage__item-stop" disabled="">
+    <button data-id="${car.id}" class="btn btn-small garage__item-start">Start</button>
+    <button data-id="${car.id}" class="btn btn-small garage__item-stop" disabled="">
     Stop</button>
   </div>
   <div class="garage__item-road">
-    <div class="garage__item-car" id="${car.id}">${carImage(car.color)}</div>
-    <div class="garage__item-finish"><img src="./assets/flag-finish.svg" alt=""></div>
+    <div class="garage__item-car">${carImage(car.color, car.id)}</div>
+    <div class="garage__item-finish">
+      <img data-id="${car.id}" class="garage__item-finish_img"
+      src="./assets/flag-finish.svg" alt="flag">
+    </div>
   </div>`;
 }
