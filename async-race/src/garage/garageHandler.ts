@@ -3,6 +3,7 @@ import { getCarApi, deleteCarApi } from '../api/api';
 import { ICar } from '../interfaces/interfaces';
 import { updateCar } from './options';
 import { renderGarageResult } from './garage';
+import { renderWinnersResult } from '../winners/winners';
 
 export function garageHandler() {
   const garageContent = document.querySelector('.garage-content') as HTMLElement;
@@ -24,6 +25,7 @@ export function garageHandler() {
       const id = Number((e.target as Element).getAttribute('data-id'));
       deleteCarApi(id);
       renderGarageResult();
+      renderWinnersResult();
     }
   });
 }

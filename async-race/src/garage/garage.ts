@@ -5,7 +5,6 @@ import { renderCar } from '../components/car';
 export async function makeGarageTitle(page: number, limit: number) {
   const response = await fetch(`${garageURL}?_page=${page}&_limit=${limit}`);
   const res = await response.json();
-
   const responseAllCars = await fetch(`${garageURL}`);
   const resAllCars = await responseAllCars.json();
 

@@ -4,7 +4,7 @@ export interface ICar {
   color: string;
 }
 export interface IWinner {
-  id: string;
+  id: number;
   wins: number;
   time: number;
   car: ICar;

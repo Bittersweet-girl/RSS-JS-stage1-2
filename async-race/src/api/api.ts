@@ -1,7 +1,8 @@
 import { garageURL } from '../components/constants';
+import { ICar } from '../interfaces/interfaces';
 
-export const createCarApi = async (body: object) => {
-  (
+export async function createCarApi(body: object): Promise<ICar> {
+  return (
     await fetch(garageURL, {
       method: 'POST',
       body: JSON.stringify(body),
@@ -10,9 +11,9 @@ export const createCarApi = async (body: object) => {
       },
     })
   ).json();
-};
+}
 
-export const getCarApi = async (id: number) => {
+export const getCarApi = async (id: number): Promise<ICar> => {
   return (await fetch(`${garageURL}/${id}`)).json();
 };
 
