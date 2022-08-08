@@ -1,9 +1,8 @@
 import { prevPage, nextPage } from '../components/pagination';
-import { getCarApi, deleteCarApi } from '../api/api';
+import { getCarApi, deleteCarApi, deleteWinnerApi } from '../api/api';
 import { ICar } from '../interfaces/interfaces';
 import { updateCar } from './options';
 import { renderGarageResult } from './garage';
-import { renderWinnersResult } from '../winners/winners';
 
 export function garageHandler() {
   const garageContent = document.querySelector('.garage-content') as HTMLElement;
@@ -24,8 +23,8 @@ export function garageHandler() {
     if ((e.target as Element).classList.contains('garage__item-remove')) {
       const id = Number((e.target as Element).getAttribute('data-id'));
       deleteCarApi(id);
+      deleteWinnerApi(id);
       renderGarageResult();
-      renderWinnersResult();
     }
   });
 }

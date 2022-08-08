@@ -1,6 +1,4 @@
-// import { getCarApi } from '../api/api';
 import { WINNERSSPERPAGE, winnersURL } from '../components/constants';
-// import { IWinner } from '../interfaces/interfaces';
 import { renderWinner } from '../components/winner';
 
 export async function renderWinners(limit: number, page: number) {

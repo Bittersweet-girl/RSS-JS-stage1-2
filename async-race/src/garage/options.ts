@@ -39,5 +39,6 @@ export function updateCar(id: number, res: ICar) {
     renderGarageResult();
     updateColor.value = '#ffffff';
     updateName.value = '';
+    (document.querySelector('.garage-update-button') as HTMLButtonElement).disabled = true;
   });
 }

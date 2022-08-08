@@ -1,4 +1,4 @@
-import { garageURL } from '../components/constants';
+import { garageURL, winnersURL } from '../components/constants';
 import { ICar } from '../interfaces/interfaces';
 
 export async function createCarApi(body: object): Promise<ICar> {
@@ -30,3 +30,6 @@ export const updateCarApi = async (id: number, body: object) =>
 
 export const deleteCarApi = async (id: number) =>
   (await fetch(`${garageURL}/${id}`, { method: 'DELETE' })).json();
+
+export const deleteWinnerApi = async (id: number) =>
+  (await fetch(`${winnersURL}/${id}`, { method: 'DELETE' })).json();
