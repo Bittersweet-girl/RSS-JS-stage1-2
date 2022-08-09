@@ -10,8 +10,8 @@ export function garageHandler() {
   const garageContent = document.querySelector('.garage-content') as HTMLElement;
 
   garageContent.addEventListener('click', (e) => {
-    const stopBtn = document.querySelector('.garage__item-stop') as HTMLButtonElement;
-    const startBtn = document.querySelector('.garage__item-start') as HTMLButtonElement;
+    const stopBtns = document.querySelectorAll<HTMLButtonElement>('.garage__item-stop');
+    const startBtns = document.querySelectorAll<HTMLButtonElement>('.garage__item-start');
     if ((e.target as Element).classList.contains('btn-prev')) {
       prevPage();
     }
@@ -32,16 +32,32 @@ export function garageHandler() {
       renderGarageResult();
     }
     if ((e.target as Element).classList.contains('garage__item-start')) {
-      const id = Number((e.target as Element).getAttribute('data-id'));
-      startEngine(id);
-      startBtn.disabled = true;
-      stopBtn.disabled = false;
+      const id = (e.target as Element).getAttribute('data-id');
+      startEngine(Number(id));
+      startBtns.forEach((btn) => {
+        if (id === btn.getAttribute('data-id')) {
+          btn.disabled = true;
+        }
+      });
+      stopBtns.forEach((btn) => {
+        if (id === btn.getAttribute('data-id')) {
+          btn.disabled = false;
+        }
+      });
     }
     if ((e.target as Element).classList.contains('garage__item-stop')) {
-      const id = Number((e.target as Element).getAttribute('data-id'));
-      stopEngine(id);
-      startBtn.disabled = false;
-      stopBtn.disabled = true;
+      const id = (e.target as Element).getAttribute('data-id');
+      stopEngine(Number(id));
+      startBtns.forEach((btn) => {
+        if (id === btn.getAttribute('data-id')) {
+          btn.disabled = false;
+        }
+      });
+      stopBtns.forEach((btn) => {
+        if (id === btn.getAttribute('data-id')) {
+          btn.disabled = true;
+        }
+      });
     }
   });
 }

@@ -4,7 +4,8 @@ import { createCar } from '../garage/options';
 import { generate } from '../garage/generate';
 import { garageHandler } from '../garage/garageHandler';
 import { makeMainWinners } from './mainWinners';
-import { raceClick } from '../car/race';
+import { raceClick } from '../garage/race';
+import { resetClick } from '../garage/reset';
 
 export function makeMainLayout() {
   const rootElement: HTMLElement = document.body;
@@ -16,5 +17,6 @@ export function makeMainLayout() {
   generate();
   garageHandler();
   raceClick();
+  resetClick();
   return rootElement;
 }
