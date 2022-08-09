@@ -26,5 +26,4 @@ export function carAnimation(id: number, animationTime: number) {
 
   STATE.end = false;
   STATE.id = window.requestAnimationFrame(step);
-  // return STATE.id;
 }

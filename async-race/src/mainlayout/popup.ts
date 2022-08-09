@@ -1,15 +1,15 @@
 import './popup.scss';
 import { getCarApi } from '../api/api';
 
-export function renderPopup(name = 'None', time = 'null') {
-  return `
-       <div class="garage-popup-content">
-          <p class="garage-popup__text">${name} went first (${time}s)!</p>
+export function renderPopup(name: string, time: string) {
+  const popup = document.querySelector('.garage-popup') as HTMLElement;
+  popup.innerHTML = `<div class="garage-popup-content">
+          <p class="garage-popup__text">${name} went first at (${time}s)!</p>
           <button class="btn garage-popup__delete">
              OK
           </button>
-       </div>
-      `;
+       </div>`;
+  return popup;
 }
 function removePopup(): void {
   const buttonClosePopup = document.querySelector('.garage-popup__delete') as HTMLButtonElement;
