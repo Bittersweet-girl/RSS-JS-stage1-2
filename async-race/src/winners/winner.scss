@@ -1,0 +1,12 @@
+h4 {
+   margin: 5px; 
+}
+.winner-table{
+    & th{
+        padding: 10px 20px;
+    }
+    & td{
+        padding: 3px;
+        text-align: center;
+    }
+}

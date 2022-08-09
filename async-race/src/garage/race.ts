@@ -1,5 +1,7 @@
 import { startEngine } from '../car/startEngine';
 import { addPopupWinner } from '../mainlayout/popup';
+import { addWinner } from '../winners/addWinner';
+import { renderWinnersResult } from '../winners/winners';
 
 async function race() {
   let itsTrue = true;
@@ -9,6 +11,10 @@ async function race() {
     if (carState?.success && itsTrue && Object.keys(carState).length !== 0) {
       itsTrue = false;
       addPopupWinner(Number(carState.id), Number(carState.animationTime));
+    }
+    if (carState.animationTime) {
+      addWinner(carState.id, Number((carState.animationTime / 1000).toFixed(2)));
+      renderWinnersResult();
     }
   });
 }

@@ -7,8 +7,7 @@ export function renderWinner(items: Array<IWinner>) {
       const car = getCarApi(winner.id);
       return `<tr>
    <td>${index + 1}</td>
-   <td>${car.then((res) => res.color)}</td>
-   <td>${winner.car}</td>
+   <td>${car.then((res) => res.name)}</td>
    <td>${winner.wins}</td>
    <td>${winner.time}</td>
  </tr>`;

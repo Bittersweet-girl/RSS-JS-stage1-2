@@ -5,9 +5,8 @@ interface ICar {
 }
 interface IWinner {
   id: number;
-  wins: number;
   time: number;
-  car: ICar;
+  wins: number;
 }
 interface IState {
   id?: number;
