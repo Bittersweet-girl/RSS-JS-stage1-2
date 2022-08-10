@@ -1,4 +1,4 @@
-import { prevPage, nextPage } from '../components/pagination';
+import { prevPage, nextPage } from './pagination';
 import { getCarApi, deleteCarApi, deleteWinnerApi } from '../api/api';
 import { ICar } from '../interfaces/interfaces';
 import { updateCar } from './options';

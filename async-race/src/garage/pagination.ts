@@ -1,5 +1,5 @@
-import { renderGarageResult } from '../garage/garage';
-import { garageURL } from './constants';
+import { renderGarageResult } from './garage';
+import { garageURL } from '../components/constants';
 
 let page = 1;
 
