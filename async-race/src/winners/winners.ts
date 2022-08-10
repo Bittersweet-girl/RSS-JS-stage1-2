@@ -1,10 +1,24 @@
 import './winner.scss';
 import { WINNERSSPERPAGE, winnersURL } from '../components/constants';
 import { renderWinner } from '../components/winner';
+import { IWinners } from '../interfaces/interfaces';
+import { getCarApi } from '../api/api';
 
-export async function renderWinners(limit: number, page: number) {
-  const response = await fetch(`${winnersURL}?_page=${page}&_limit=${limit}`);
-  const items = await response.json();
+function getSort(sort: string, order: string): string {
+  if (sort && order) return `&_sort=${sort}&_order=${order}`;
+  return '';
+}
+
+export async function renderWinners(limit: number, page: number, sort: string, order: string) {
+  const response = await fetch(
+    `${winnersURL}?_page=${page}&_limit=${limit}${getSort(sort, order)}`,
+  );
+  const winnersItem = await response.json();
+  const winnersRes: Array<IWinners> = await Promise.all(
+    winnersItem.map(async (winner: IWinners) => ({ ...winner, car: await getCarApi(winner.id) })),
+  );
+  const respons = await fetch(`${winnersURL}?`);
+  const items = await respons.json();
   return `
   <h3>Winners (${items.length})</h3>
  <h4>Page ${page}</h4>
@@ -16,13 +30,13 @@ export async function renderWinners(limit: number, page: number) {
     <th>Best time (sec)</th>
   </thead>
 <tbody>
-${renderWinner(items)}
+${renderWinner(winnersRes)}
   </tbody>
 </table>`;
 }
 
 export function renderWinnersResult(page = 1) {
-  renderWinners(WINNERSSPERPAGE, page).then((res) => {
+  renderWinners(WINNERSSPERPAGE, page, 'id', 'ASC').then((res) => {
     const winnersContent = document.querySelector('.winners-content') as HTMLElement;
     winnersContent.innerHTML = '';
     winnersContent.innerHTML = res;

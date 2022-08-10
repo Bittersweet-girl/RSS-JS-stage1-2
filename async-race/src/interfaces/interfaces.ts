@@ -8,6 +8,12 @@ interface IWinner {
   time: number;
   wins: number;
 }
+interface IWinners {
+  id: number;
+  car: ICar;
+  wins: number;
+  time: number;
+}
 interface IState {
   id?: number;
   end?: boolean;
@@ -23,4 +29,4 @@ interface IDrive {
   id?: number;
   animationTime?: number;
 }
-export { ICar, IWinner, IState, IEngine, IDrive };
+export { ICar, IWinner, IWinners, IState, IEngine, IDrive };

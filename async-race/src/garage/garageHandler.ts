@@ -5,6 +5,7 @@ import { updateCar } from './options';
 import { renderGarageResult } from './garage';
 import { startEngine } from '../car/startEngine';
 import { stopEngine } from '../car/stopEngine';
+import { renderWinnersResult } from '../winners/winners';
 
 export function garageHandler() {
   const garageContent = document.querySelector('.garage-content') as HTMLElement;
@@ -30,6 +31,7 @@ export function garageHandler() {
       deleteCarApi(id);
       deleteWinnerApi(id);
       renderGarageResult();
+      renderWinnersResult();
     }
     if ((e.target as Element).classList.contains('garage__item-start')) {
       const id = (e.target as Element).getAttribute('data-id');

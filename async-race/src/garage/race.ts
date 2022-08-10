@@ -11,9 +11,9 @@ async function race() {
     if (carState?.success && itsTrue && Object.keys(carState).length !== 0) {
       itsTrue = false;
       addPopupWinner(Number(carState.id), Number(carState.animationTime));
+      addWinner(carState.id, Number((carState.animationTime / 1000).toFixed(2)));
     }
     if (carState.animationTime) {
-      addWinner(carState.id, Number((carState.animationTime / 1000).toFixed(2)));
       renderWinnersResult();
     }
   });

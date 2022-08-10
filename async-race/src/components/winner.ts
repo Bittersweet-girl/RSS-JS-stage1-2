@@ -1,13 +1,11 @@
-import { IWinner } from '../interfaces/interfaces';
-import { getCarApi } from '../api/api';
+import { IWinners } from '../interfaces/interfaces';
 
-export function renderWinner(items: Array<IWinner>) {
+export function renderWinner(items: Array<IWinners>) {
   return `${items
-    .map((winner: IWinner, index: number) => {
-      const car = getCarApi(winner.id);
+    .map((winner: IWinners, index: number) => {
       return `<tr>
    <td>${index + 1}</td>
-   <td>${car.then((res) => res.name)}</td>
+   <td>${winner.car.name}</td>
    <td>${winner.wins}</td>
    <td>${winner.time}</td>
  </tr>`;
