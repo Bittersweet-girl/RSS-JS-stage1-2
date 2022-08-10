@@ -30,8 +30,8 @@ export async function renderWinners(limit: number, page: number, sort: string, o
   <thead>
     <th>Number</th>
     <th>Name</th>
-    <th>Wins</th>
-    <th>Best time (sec)</th>
+    <th><button class="btn btn-win">Wins</button></th>
+    <th><button class="btn btn-time">Best time (sec)</button></th>
   </thead>
 <tbody>
 ${renderWinner(winnersRes)}
@@ -39,8 +39,8 @@ ${renderWinner(winnersRes)}
 </table>`;
 }
 
-export function renderWinnersResult(page = 1) {
-  renderWinners(WINNERSSPERPAGE, page, 'id', 'ASC').then((res) => {
+export function renderWinnersResult(page = 1, sort = 'id', order = 'ASC') {
+  renderWinners(WINNERSSPERPAGE, page, sort, order).then((res) => {
     const winnersContent = document.querySelector('.winners-content') as HTMLElement;
     winnersContent.innerHTML = '';
     winnersContent.innerHTML = res;
