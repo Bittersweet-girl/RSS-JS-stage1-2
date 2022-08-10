@@ -21,8 +21,12 @@ export async function renderWinners(limit: number, page: number, sort: string, o
   const items = await respons.json();
   return `
   <h3>Winners (${items.length})</h3>
- <h4>Page ${page}</h4>
- <table class="winner-table">
+  <div class="winners-pagination">
+    <h4 class="winners-pagination__title">Page ${page}</h4>
+    <button class="btn btn-prev">Prev</button>
+    <button class="btn btn-next">Next</button>
+  </div>
+  <table class="winner-table">
   <thead>
     <th>Number</th>
     <th>Name</th>

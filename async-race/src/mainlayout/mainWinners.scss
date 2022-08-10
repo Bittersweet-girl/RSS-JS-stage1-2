@@ -1,3 +1,12 @@
 .winners{
     display: none;
+    padding: 10px 0 0 20px;
+    &-pagination {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+    }
+    &-pagination__title {
+        margin-right: 10px;
+    }
 }
